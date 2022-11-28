@@ -1,0 +1,14 @@
+.title {
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--white);
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: var(--bebas);
+  text-transform: uppercase;
+  font-size: 64px;
+
+  @media (max-width: 650px) {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,8 @@
+.grid-list {
+  padding: 3em;
+  margin-bottom: 4em;
+  border: 1px solid #000000;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}

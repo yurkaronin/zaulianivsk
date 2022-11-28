@@ -1,0 +1,48 @@
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  text-decoration: none;
+  padding: 14px 24px;
+  background-color: var(--Blue);
+  border: 1px solid;
+  border-color: var(--Blue);
+  cursor: pointer;
+  box-shadow: none;
+  color: var(--White);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  font-family: var(--Inter);
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+
+  &--transparent {
+    background-color: transparent;
+    color: var(--green);
+  }
+  &--icon {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 10px;
+    }
+  }
+
+  &--big {
+    padding: 28px 40px;
+    height: initial;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    &--big {
+      padding: 20px 30px;
+      font-size: 14px;
+    }
+  }
+}
