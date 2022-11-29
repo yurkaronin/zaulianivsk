@@ -17,18 +17,11 @@
 
   <?php include './components/header.php';?>
 
-  <main>
+  <main class="main">
 
-    <?php
-    // первый экран главной страницы
-    include 'components/first-screen.php';
-    // анонсы направлений услуг
-    include 'components/services.php';
-    // персональный блок с дядькой
-    include 'components/personal-card.php';
-    // Преимущества 1 вариант (без заголовка)
-    include 'components/benefits.php';
-    ?>
+  <?php include './components/home-screen.php'?>
+
+
   </main>
 
   <?php
@@ -37,6 +30,7 @@
     // JS библиотеки и прочие зависимости
     include 'components/scripts_include.php'
     ?>
+
 </body>
 
 </html>

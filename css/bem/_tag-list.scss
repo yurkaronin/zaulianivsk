@@ -1,0 +1,30 @@
+.tag-list {
+  display: flex;
+  &__item {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--White);
+    padding: 9px 16px;
+    background: var(--Cyan);
+    border-radius: 4px;
+    text-align: center;
+
+    span {
+      font-family: inherit;
+      color: inherit;
+    }
+  }
+}

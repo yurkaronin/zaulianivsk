@@ -23,10 +23,8 @@ function headerChange() {
 // Основная рабочая область
 document.addEventListener("DOMContentLoaded", () => {
   // подключаем файлы тут
-  includeFiles("./js/parts/accordion.js");
-  // includeFiles("./js/parts/sliders.js");
-  // includeFiles("./js/parts/input-validate.js");
-  // includeFiles("./js/parts/yandex.map.js");
+  // includeFiles("./js/parts/accordion.js");
+  includeFiles("./js/parts/sliders.js");
 
   // небольшие программы
   // Проверяем состояние прокрутки страницы. если прокрутка есть - перекрашиваем шапку
@@ -40,25 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle('mob-menu-open');
     menuButton.classList.toggle('open');
   });
-  // аккордеон меню в подвале (только под мобилки)
-  if (window.screen.width <= 768) {
-    footerLink.classList.toggle('active');
-
-    footerLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      footerLink.classList.toggle('active');
-    });
-  };
-  // аккордеон меню в шапке (от 1100px)
-  if (window.screen.width <= 1100) {
-    for (let item of mobileLink) {
-      item.addEventListener('click', function (e) {
-        e.preventDefault();
-        item.classList.toggle('active');
-      });
-    };
-
-  };
 
 
 });
