@@ -19,7 +19,14 @@
 
   <main class="main">
 
-  <?php include './components/home-screen.php'?>
+    <?php
+    include './components/home-screen.php';
+    include './components/news.php';
+    include './components/about.php';
+
+
+    ?>
+
 
 
   </main>

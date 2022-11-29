@@ -1,6 +1,7 @@
 const swiper = new Swiper('.home-screen .mySwiper', {
   direction: "vertical",
   // loop: true,
+  // autoplay: true,
 
   pagination: {
     el: '.home-screen .swiper-pagination',

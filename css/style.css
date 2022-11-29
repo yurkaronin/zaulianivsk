@@ -141,6 +141,21 @@ input[type=radio].visually-hidden {
 .section {
   padding: 40px 0 50px;
 }
+.section__top {
+  display: grid;
+  gap: 32px;
+  align-items: flex-start;
+  grid-template-columns: 1fr 225px;
+  padding-bottom: 40px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid;
+  border-color: var(--Line);
+}
+.section__top .button {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 24px;
+}
 @media (max-width: 425px) {
   .section {
     padding: 30px 0 40px;
@@ -388,6 +403,68 @@ input[type=radio].visually-hidden {
   color: inherit;
 }
 
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.card-list a {
+  display: block;
+}
+.card-list img {
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+.card-list .date {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(15, 44, 77, 0.7);
+  margin-bottom: 32px;
+}
+.card-list .title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0f2c4d;
+  margin: 0;
+  text-transform: initial;
+}
+
+.picture-with-text {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+}
+.picture-with-text__image {
+  max-width: 608px;
+  margin-right: auto;
+}
+.picture-with-text__image img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.picture-with-text .title {
+  font-size: 24px;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.text {
+  font-family: var(--Merriweather);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(15, 44, 77, 0.8);
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -580,4 +657,12 @@ input[type=radio].visually-hidden {
   margin: 0;
   width: 100%;
   max-width: 100%;
+}
+
+.news {
+  background-color: rgba(233, 239, 245, 0.5);
+}
+
+.footer {
+  background-color: #00163A;
 }

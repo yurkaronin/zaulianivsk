@@ -8,6 +8,7 @@
           <!-- Slides -->
           <?php
           include './components/repeat/home-screen-slide.php';
+          include './components/repeat/home-screen-slide.php';
           ?>
 
         </div>
@@ -21,8 +22,5 @@
       </div>
     </div>
 
-
-
-  </div>
   </div>
 </section>

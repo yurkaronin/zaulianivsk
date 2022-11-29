@@ -1,0 +1,33 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .date {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba(#0f2c4d, 0.7);
+    margin-bottom: 32px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #0f2c4d;
+    margin: 0;
+    text-transform: initial;
+  }
+}
