@@ -1,14 +1,15 @@
 const swiper = new Swiper('.home-screen .mySwiper', {
   direction: "vertical",
+  // loop: true,
 
   pagination: {
-    el: '.home-screen .slider-pagination',
+    el: '.home-screen .swiper-pagination',
     clickable: true,
   },
 
   navigation: {
-    nextEl: '.home-screen .slider-button--next',
-    prevEl: '.home-screen .slider-button--prev',
+    nextEl: '.home-screen .swiper-button--next',
+    prevEl: '.home-screen .swiper-button--prev',
   },
 
 });

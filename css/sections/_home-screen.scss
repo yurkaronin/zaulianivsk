@@ -93,37 +93,4 @@
     max-width: 100%;
   }
 
-  .swiper-button {
-    width: 26px;
-    height: 20px;
-    display: block;
-    &::after {
-      display: none;
-    }
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev,
-  .swiper-pagination {
-    position: initial !important;
-    transform: none !important;
-  }
-
-  .swiper-pagination {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .swiper-pagination-bullet {
-    position: initial !important;
-    transform: none !important;
-    margin: 0 !important;
-    margin-bottom: 32px !important;
-    width: 8px;
-    height: 8px;
-    background-color: var(--White);
-    &:last-child {
-      margin-bottom: 0 !important;
-    }
-  }
 }

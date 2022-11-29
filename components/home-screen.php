@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="home-screen__grid">
       <!-- Слайдер -->
-      <div class="swiper">
+      <div class="swiper mySwiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->

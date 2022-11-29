@@ -581,34 +581,3 @@ input[type=radio].visually-hidden {
   width: 100%;
   max-width: 100%;
 }
-.home-screen .swiper-button {
-  width: 26px;
-  height: 20px;
-  display: block;
-}
-.home-screen .swiper-button::after {
-  display: none;
-}
-.home-screen .swiper-button-next,
-.home-screen .swiper-button-prev,
-.home-screen .swiper-pagination {
-  position: initial !important;
-  transform: none !important;
-}
-.home-screen .swiper-pagination {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.home-screen .swiper-pagination-bullet {
-  position: initial !important;
-  transform: none !important;
-  margin: 0 !important;
-  margin-bottom: 32px !important;
-  width: 8px;
-  height: 8px;
-  background-color: var(--White);
-}
-.home-screen .swiper-pagination-bullet:last-child {
-  margin-bottom: 0 !important;
-}
