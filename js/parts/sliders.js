@@ -1,7 +1,11 @@
 const swiper = new Swiper('.home-screen .mySwiper', {
-  direction: "vertical",
+
   // loop: true,
-  // autoplay: true,
+  speed: 900,
+  parallax: true,
+  autoplay: {
+    delay: 5000,
+  },
 
   pagination: {
     el: '.home-screen .swiper-pagination',
@@ -9,8 +13,9 @@ const swiper = new Swiper('.home-screen .mySwiper', {
   },
 
   navigation: {
-    nextEl: '.home-screen .swiper-button--next',
-    prevEl: '.home-screen .swiper-button--prev',
+    nextEl: '.home-screen .swiper-button-next',
+    prevEl: '.home-screen .swiper-button-prev',
   },
+
 
 });

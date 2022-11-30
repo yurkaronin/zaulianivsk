@@ -6,7 +6,7 @@
 
     <div class="picture-with-text">
       <div class="picture-with-text__image">
-        <img src="./img/about-us/1.jpg" alt="Фотография" witth="608">
+        <img src="./img/about-us/1.jpg" alt="Фотография" width="608">
       </div>
       <div class="picture-with-text__details">
         <h3 class="title">Значительную часть своего свободного времени граждане проводят во дворах и общественных пространствах. От того, насколько комфортно гражданам в этих пространствах, зависит их настроение, самочувствие, работоспособность.</h3>

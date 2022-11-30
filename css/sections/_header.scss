@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -7,24 +7,45 @@
   max-width: 100%;
   z-index: 100;
   color: var(--White);
+  transition: color 0.3s;
 
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    background-color: rgba(#ffffff, 0.15);
+    transition: width 0.3s;
+  }
 
   &__grid {
     display: grid;
     grid-template-columns: 262px 1fr;
     gap: 32px;
     align-items: center;
-    border-bottom: 1px solid;
-  border-color: rgba(#ffffff, 0.15);
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      background-color: rgba(#ffffff, 0.15);
+      transition: width 0.3s;
+    }
   }
   &__logo {
     img {
       display: block;
     }
   }
-  &__navigation {
 
-  }
   &__menu-button {
     display: none;
   }
