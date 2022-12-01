@@ -67,8 +67,24 @@
   &__item--mod svg {
     display: block;
   }
+  &__sub {
+    background: var(--Blue);
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    padding: 32px;
+    left: 0;
+    top: 100%;
+  }
   &__list--sub {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 16px 32px;
+  }
+  &__item--sub {
+    svg {
+      margin-right: 16px;
+    }
   }
 
   // активный пункт меню

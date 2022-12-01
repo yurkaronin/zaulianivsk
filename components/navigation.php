@@ -11,7 +11,7 @@
           </svg>
         </a>
         <!-- Подменю  -->
-        <?php include './components/subnavigation.php';?>
+        <?php include './components/subnavigation-1.php';?>
       </li>
 
       <li class="navigation__item">
@@ -22,7 +22,7 @@
           </svg>
         </a>
         <!-- Подменю  -->
-        <?php include './components/subnavigation-2.php';?>
+        <!-- <?php include './components/subnavigation-2.php';?> -->
       </li>
 
       <li class="navigation__item">
