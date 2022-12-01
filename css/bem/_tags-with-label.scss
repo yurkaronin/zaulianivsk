@@ -1,0 +1,14 @@
+.tags-with-label {
+  display: flex;
+  align-items: center;
+  color: var(--White);
+  margin-bottom: 22px;
+
+  p {
+    margin: 0;
+    margin-left: 12px;
+    color: var(--DarkGrey);
+    opacity: 0.7;
+    font-size: 14px;
+}
+}

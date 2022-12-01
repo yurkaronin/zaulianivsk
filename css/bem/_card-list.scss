@@ -30,4 +30,9 @@
     margin: 0;
     text-transform: initial;
   }
+
+  &--two {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
 }

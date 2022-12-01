@@ -16,15 +16,18 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1;
-    color: var(--White);
-    padding: 9px 16px;
-    background: var(--Cyan);
+    color: var(--DarkGrey);
+    padding: 8px 16px;
+    background: var(--White);
     border-radius: 4px;
     text-align: center;
+    border: 1px solid;
+    border-color: var(--Line);
 
     span {
       font-family: inherit;
       color: inherit;
     }
+
   }
 }

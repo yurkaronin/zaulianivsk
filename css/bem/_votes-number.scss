@@ -1,0 +1,17 @@
+.votes-number {
+  margin: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(var(--DarkGrey), 0.7);
+
+  span {
+    display: block;
+    color: rgba(var(--DarkGrey), 1);
+    font-weight: 900;
+    font-size: 48px;
+    margin-top: 5px;
+}
+}
