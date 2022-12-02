@@ -42,13 +42,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // показ подкатегорий в шапке сайта при наведени на пункт в меню
   let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+
+  // for (let item of headerMenuLink) {
+  //   item.addEventListener('mouseover', (event) => {
+  //     console.log(event.target);
+  //     item.classList.add('active');
+  //   });
+  // };
   for (let item of headerMenuLink) {
-    item.addEventListener('mouseover', (event) => {
-      event.target.classList.add('active');
+    item.addEventListener('mouseover', function (event) {
+      console.log(this);
+      this.classList.add('active');
     });
-    item.addEventListener('onmouseout', (event) => {
-      event.target.classList.remove('active');
+
+    item.addEventListener('mouseout', function (event) {
+      this.classList.remove('active');
+      console.log(this);
     });
+
   };
 
 

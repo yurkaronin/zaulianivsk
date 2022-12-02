@@ -24,19 +24,19 @@
       text-transform: uppercase;
       color: inherit;
       text-decoration: none;
-
       text-align: center;
+      pointer-events: none;
     }
     svg {
       display: none;
       flex-shrink: 0;
+      pointer-events: none;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--Cyan);
+    &.current-page {
+      background: var(--Blue);
     }
+
   }
 
   &__item--mod &__link {
@@ -64,6 +64,7 @@
   &__item--mod span {
     display: none;
   }
+
   &__item--mod svg {
     display: block;
   }
@@ -81,7 +82,7 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
 
     &.show {
       opacity: 1;
@@ -119,6 +120,17 @@
   &__link:not([href]) {
     background-color: var(--Cyan);
     color: var(--White) !important;
+  }
+
+  &__item:hover {
+    .navigation__link {
+      background-color: var(--Blue);
+    }
+    .navigation__sub {
+      opacity: 1;
+      pointer-events: initial;
+      visibility: initial;
+    }
   }
 
   @media (max-width: 1024px) {
