@@ -695,14 +695,39 @@ input[type=radio].visually-hidden {
   padding: 32px;
   left: 0;
   top: 100%;
+  margin-top: -1px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+.navigation__sub.show {
+  opacity: 1;
+  pointer-events: initial;
+  visibility: initial;
 }
 .navigation__list--sub {
   display: grid;
   grid-template-columns: repeat(6, 2fr);
-  gap: 16px 32px;
 }
-.navigation__item--sub svg {
+.navigation__item--sub a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.navigation__item--sub a svg {
   margin-right: 16px;
+  transition: transform 0.3s;
+}
+.navigation__item--sub a:hover {
+  background-color: var(--Cyan);
+}
+.navigation__item--sub a:hover svg {
+  transform: rotate(90deg);
 }
 .navigation__link.active, .navigation__link:not([href]) {
   background-color: var(--Cyan);
@@ -965,4 +990,11 @@ input[type=radio].visually-hidden {
 .header-sticky .navigation__link {
   padding-top: 29px;
   padding-bottom: 29px;
+}
+.header-sticky .navigation__link.active {
+  background-color: var(--Blue);
+  color: var(--White) !important;
+}
+.header-sticky .navigation__item--mod .navigation__link {
+  padding: 0;
 }

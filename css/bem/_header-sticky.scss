@@ -16,6 +16,15 @@
     &__link {
       padding-top: 29px;
       padding-bottom: 29px;
+      &.active {
+        background-color: var(--Blue);
+        color: var(--White) !important;
+      }
+    }
+  }
+  .navigation__item--mod {
+    .navigation__link {
+      padding: 0;
     }
   }
 }

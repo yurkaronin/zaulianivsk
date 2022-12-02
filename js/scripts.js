@@ -40,6 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.classList.toggle('open');
   });
 
+  // показ подкатегорий в шапке сайта при наведени на пункт в меню
+  let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+  for (let item of headerMenuLink) {
+    item.addEventListener('mouseover', (event) => {
+      event.target.classList.add('active');
+    });
+    item.addEventListener('onmouseout', (event) => {
+      event.target.classList.remove('active');
+    });
+  };
 
 
 
