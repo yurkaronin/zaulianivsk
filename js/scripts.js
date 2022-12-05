@@ -42,13 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // показ подкатегорий в шапке сайта при наведени на пункт в меню
   let headerMenuLink = document.querySelectorAll('.header .navigation__link');
-
-  // for (let item of headerMenuLink) {
-  //   item.addEventListener('mouseover', (event) => {
-  //     console.log(event.target);
-  //     item.classList.add('active');
-  //   });
-  // };
   for (let item of headerMenuLink) {
     item.addEventListener('mouseover', function (event) {
       console.log(this);
