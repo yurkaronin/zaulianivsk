@@ -9,6 +9,7 @@
   border: none;
   padding: 0;
   display: block;
+  background-color: transparent;
 
   .icon {
     pointer-events: none;
@@ -17,7 +18,7 @@
     height: 2px;
     width: 32px;
     top: 16px;
-    background-color: var(--Blue);
+    background-color: var(--White);
     left: 0;
     &:before {
       transition-duration: 0.5s;
@@ -25,7 +26,7 @@
       width: 32px;
       height: 2px;
       left: 0;
-      background-color: var(--Blue);
+      background-color: var(--White);
       content: "";
       top: -11px;
     }
@@ -35,7 +36,7 @@
       width: 32px;
       height: 2px;
       left: 0;
-      background-color: var(--Blue);
+      background-color: var(--White);
       content: "";
       top: 11px;
     }

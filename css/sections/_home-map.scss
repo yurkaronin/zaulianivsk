@@ -20,6 +20,10 @@
       height: 320px;
     }
   }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 /** dealer-detail */

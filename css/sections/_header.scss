@@ -36,6 +36,10 @@
     }
   }
 
+  &__user-link {
+    display: none;
+  }
+
   &__menu-button {
     display: none;
   }
@@ -60,10 +64,24 @@
 
   @media (max-width: 1024px) {
     &__grid {
-      grid-template-columns: 262px 1fr 30px;
+      grid-template-columns: 1fr 32px 32px;
+      align-items: center;
+      padding: 23px 0;
+      transition: padding 0.3s;
     }
+
+    &__navigation {
+      position: absolute;
+      left: 200%;
+    }
+
     &__menu-button {
       display: block;
+    }
+    &__user-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

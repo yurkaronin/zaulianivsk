@@ -14,22 +14,28 @@
         &::after {
           opacity: 0;
         }
+      }
     }
-  }
-  .navigation {
-    &__link {
-      padding-top: 29px;
-      padding-bottom: 29px;
-      &.active {
-        background-color: var(--Blue);
-        color: var(--White) !important;
+    .navigation {
+      &__link {
+        padding-top: 29px;
+        padding-bottom: 29px;
+        &.active {
+          background-color: var(--Blue);
+          color: var(--White) !important;
+        }
+      }
+    }
+    .navigation__item--mod {
+      .navigation__link {
+        padding: 0;
       }
     }
   }
-  .navigation__item--mod {
-    .navigation__link {
-      padding: 0;
+
+  @media (max-width: 1024px) {
+    .header__grid {
+      padding: 12px 0;
     }
   }
-}
 }

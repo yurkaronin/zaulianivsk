@@ -13,6 +13,7 @@
     include './components/repeat/card-item-long-1.php';
     include './components/repeat/card-item-long-2.php';
     include './components/repeat/card-item-long-1.php';
+    include './components/repeat/card-item-long-2.php';
 
     ?>
     </ul>

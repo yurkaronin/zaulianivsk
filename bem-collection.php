@@ -11,34 +11,29 @@
 
   <!-- favicon css стили -->
   <?php include './components/styles_include.php'?>
-
 </head>
 
 <body class="body">
 
-  <?php include './components/header.php';?>
+  <main class="main">
 
-  <main>
-    <section class="section">
-      <div class="wrapper">
-        <ul class="list-reset grid-list">
-          <li><a href="#" class="button"><span>Ссылка как кнопка</span></a></li>
-          <li><button class="button"><span>Кнопка</span></button></li>
-        </ul>
+    <?php
+    include './components/first-of-all.php';
+    include './components/news.php';
+    include './components/about.php';
+    ?>
 
 
-      </div>
-    </section>
 
 
   </main>
 
   <?php
     // подвал
-    include 'components/footer.php';
     // JS библиотеки и прочие зависимости
     include 'components/scripts_include.php'
     ?>
+
 </body>
 
 </html>

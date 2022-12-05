@@ -57,7 +57,7 @@
           </svg>
         </a>
       </li>
-      <!-- ССылка на личный кабинет -->
+      <!-- Ссылка на личный кабинет -->
       <li class="navigation__item navigation__item--mod">
         <a class="navigation__link" href="#">
           <span>Личный кабинет</span>
