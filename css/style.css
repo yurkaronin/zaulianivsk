@@ -603,7 +603,7 @@ input[type=radio].visually-hidden {
   display: block;
   width: 0;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -614,6 +614,8 @@ input[type=radio].visually-hidden {
   grid-template-columns: 262px 1fr;
   gap: 32px;
   align-items: center;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.15);
 }
 .header__logo img {
   display: block;
@@ -734,22 +736,44 @@ input[type=radio].visually-hidden {
 .sub-navigation__list {
   display: grid;
   grid-template-columns: repeat(6, 2fr);
+  gap: 6px 32px;
 }
 .sub-navigation__link {
   display: flex;
   align-items: center;
-  padding: 12px 20px;
+  padding: 10px 0;
   border-radius: 4px;
   background-color: transparent;
   transition: background-color 0.3s;
+  font-size: 14px;
+  position: relative;
+}
+.sub-navigation__link span {
+  position: relative;
 }
 .sub-navigation__link svg {
-  margin-right: 16px;
+  margin-right: 12px;
+  position: relative;
   transition: transform 0.3s;
 }
-.sub-navigation__link:hover {
+.sub-navigation__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: left 0.3s, right 0.3s, background-color 0.3s;
+  pointer-events: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.sub-navigation__link:active::before, .sub-navigation__link.active::before, .sub-navigation__link:hover::before, .sub-navigation__link:not([href])::before {
+  left: -15px;
+  right: -15px;
   background-color: var(--Cyan);
 }
+
 .home-screen {
   position: relative;
   overflow: hidden;
@@ -1126,17 +1150,24 @@ input[type=radio].visually-hidden {
 .header-sticky .header::after {
   width: 100%;
 }
+.header-sticky .header__grid {
+  border-bottom: none;
+  transition: border-bottom 0.3s;
+}
 .header-sticky .header__grid::after {
   width: 0;
 }
-.header-sticky .navigation__link {
+.header-sticky .header__grid::after::after {
+  opacity: 0;
+}
+.header-sticky .header .navigation__link {
   padding-top: 29px;
   padding-bottom: 29px;
 }
-.header-sticky .navigation__link.active {
+.header-sticky .header .navigation__link.active {
   background-color: var(--Blue);
   color: var(--White) !important;
 }
-.header-sticky .navigation__item--mod .navigation__link {
+.header-sticky .header .navigation__item--mod .navigation__link {
   padding: 0;
 }
