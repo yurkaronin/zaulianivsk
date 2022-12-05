@@ -7,11 +7,11 @@
   line-height: 1;
   color: rgba(var(--DarkGrey), 0.7);
 
-  span {
+  &__big {
     display: block;
     color: rgba(var(--DarkGrey), 1);
     font-weight: 900;
     font-size: 48px;
     margin-top: 5px;
-}
+  }
 }

@@ -2,7 +2,7 @@
   display: grid;
   gap: 32px;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: flex-start;
   &__image {
     max-width: 608px;
     margin-right: auto;
@@ -21,6 +21,17 @@
     text-transform: none;
     font-weight: 700;
     // margin-bottom: 24px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 23px;
+
+    &__image {
+      max-width: 100%;
+      margin-right: initial;
+      width: 100%;
+  }
   }
 
 }

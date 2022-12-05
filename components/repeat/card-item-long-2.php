@@ -25,7 +25,7 @@
   </div>
 
   <div class="card-item-long__right">
-    <p class="votes-number">Количество голосов:<span>12 240</span></p>
+    <p class="votes-number"><span class="votes-number__text">Количество голосов:</span><span class="votes-number__big">12 240</span></p>
     <a class="button button--blue" href="#"><span>Проголосовать</span></a>
 
   </div>

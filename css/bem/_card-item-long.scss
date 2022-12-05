@@ -222,4 +222,17 @@
       font-size: 40px;
     }
   }
+
+  @media (max-width: 650px) {
+    .votes-number {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+
+      span {
+        margin-left: 12px;
+      }
+    }
+  }
 }
