@@ -246,6 +246,7 @@ input[type=radio].visually-hidden {
   max-width: 100%;
   background-color: var(--Red);
   border-color: var(--Red);
+  padding: 20px 24px;
 }
 @media (max-width: 768px) {
   .button--big {
@@ -430,7 +431,7 @@ input[type=radio].visually-hidden {
 }
 .card-list img {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   border-radius: 4px;
   overflow: hidden;
   width: 100%;
@@ -441,7 +442,8 @@ input[type=radio].visually-hidden {
   font-size: 14px;
   line-height: 1;
   color: rgba(15, 44, 77, 0.7);
-  margin-bottom: 32px;
+  display: block;
+  margin-bottom: 16px;
 }
 .card-list .title {
   font-weight: 700;
@@ -460,6 +462,7 @@ input[type=radio].visually-hidden {
   display: grid;
   gap: 32px;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 .picture-with-text__image {
   max-width: 608px;
@@ -537,7 +540,6 @@ input[type=radio].visually-hidden {
   padding: 30px 40px;
   padding-right: 32px;
   width: 100%;
-  max-width: 736;
   flex-grow: 2;
   position: relative;
 }
@@ -555,10 +557,10 @@ input[type=radio].visually-hidden {
 .card-item-long .card-item__right {
   padding: 28px 40px;
   width: 100%;
-  max-width: 336px;
+  max-width: 350px;
 }
 .card-item-long .votes-number {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .card-item-long .button {
   max-width: 100%;

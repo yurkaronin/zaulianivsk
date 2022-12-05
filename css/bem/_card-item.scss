@@ -21,7 +21,6 @@
     padding: 30px 40px;
     padding-right: 32px;
     width: 100%;
-    max-width: 736;
     flex-grow: 2;
     position: relative;
 
@@ -43,10 +42,10 @@
     // border-left: 1px solid;
     // border-color: var(--Line);
     width: 100%;
-    max-width: 336px;
+    max-width: 350px;
   }
   .votes-number {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .button {
     max-width: 100%;

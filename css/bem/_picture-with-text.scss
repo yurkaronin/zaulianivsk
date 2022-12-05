@@ -2,6 +2,7 @@
   display: grid;
   gap: 32px;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   &__image {
     max-width: 608px;
     margin-right: auto;
