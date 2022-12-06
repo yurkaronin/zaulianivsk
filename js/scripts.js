@@ -35,27 +35,45 @@ document.addEventListener("DOMContentLoaded", () => {
     headerChange();
   });
   // при клике по кнопке вызова меню - добавляем служебный класс на body
-  menuButton.addEventListener('click', function () {
-    document.body.classList.toggle('mob-menu-open');
-    menuButton.classList.toggle('open');
-  });
-
-  // показ подкатегорий в шапке сайта при наведени на пункт в меню
-  let headerMenuLink = document.querySelectorAll('.header .navigation__link');
-  for (let item of headerMenuLink) {
-    item.addEventListener('mouseover', function (event) {
-      console.log(this);
-      this.classList.add('active');
+  if(menuButton) {
+    menuButton.addEventListener('click', function () {
+      document.body.classList.toggle('mob-menu-open');
+      menuButton.classList.toggle('open');
     });
-
-    item.addEventListener('mouseout', function (event) {
-      this.classList.remove('active');
-      console.log(this);
-    });
-
   };
 
 
+  // показ подкатегорий в шапке сайта при наведении на пункт в меню
+  if (document.body.clientWidth < 1440) {
+    let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+    for (let item of headerMenuLink) {
+      item.addEventListener('mouseover', function (event) {
+        console.log(this);
+        this.classList.add('active');
+      });
+
+      item.addEventListener('mouseout', function (event) {
+        this.classList.remove('active');
+        console.log(this);
+      });
+
+    };
+  }
+  // удаляем атрибут href у ссылок с вложенными пунктами (аккордеоны)
+
+  if (window.innerWidth <= 1440) {
+    let navigationLink = document.querySelectorAll('.navigation__link--mod');
+    for (let item of navigationLink) {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          // item.classList.toggle('mob-menu-open');
+          item.parentNode.classList.toggle('active');
+        });
+
+
+    };
+
+  };
 
 });
 

@@ -23,65 +23,118 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 262px 1fr;
-    gap: 32px;
+    grid-template-columns: 262px 1fr 24px;
+    gap: 40px;
     align-items: center;
     border-bottom: 1px solid;
     border-color: rgba(#ffffff, 0.15);
-    // position: relative;
   }
   &__logo {
+    position: relative;
+    z-index: 11;
+    max-width: 265px;
     img {
       display: block;
     }
   }
 
   &__user-link {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    svg {
+      scale: 0.75;
+      flex-shrink: 0;
+      rect {
+        stroke: var(--White);
+        transition: stroke 0.3s;
+      }
+      path {
+        stroke: var(--White);
+        transition: stroke 0.3s;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        rect {
+          stroke: var(--Cyan);
+          transition: stroke 0.3s;
+        }
+        path {
+          stroke: var(--Cyan);
+          transition: stroke 0.3s;
+        }
+      }
+    }
   }
 
   &__menu-button {
     display: none;
   }
 
-  // .border {
-  //   .wrapper {
-  //     position: relative;
-  //   }
-
-  //   &__item {
-  //     display: block;
-  //     position: absolute;
-  //     max-width: 100%;
-  //     margin: 0 auto;
-  //     width: 100%;
-  //     height: 1px;
-  //     bottom: -1px;
-  //     background-color: rgba(#ffffff, 0.15);
-  //     z-index: 0;
-  //   }
-  // }
-
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     &__grid {
       grid-template-columns: 1fr 32px 32px;
+      gap: 32px;
       align-items: center;
       padding: 23px 0;
       transition: padding 0.3s;
     }
+    &__logo {
+      position: relative;
+      z-index: 11;
+    }
+    &__user-link {
+      svg {
+        scale: initial;
+      }
+    }
 
     &__navigation {
-      position: absolute;
-      left: 200%;
+      left: -100%;
+      position: fixed;
+      top: 96px;
+      width: 100%;
+      height: calc(100vh - 96px);
+      overflow: auto;
+      padding-top: 16px;
+      padding-bottom: 43px;
+      background: linear-gradient(277.49deg, rgba(7, 112, 220, 0.8) 0%, rgba(7, 112, 220, 0) 100%), #00163a;
+      z-index: 5;
+      transition-duration: 0.3s;
     }
 
     &__menu-button {
       display: block;
+      position: relative;
+      z-index: 11;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__logo {
+      max-width: 255px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__grid {
+      padding: 18px 0 22px;
+      gap: 25px;
+    }
+    &__logo {
+      max-width: 155px;
     }
     &__user-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      svg {
+        scale: 0.75;
+        flex-shrink: 0;
+      }
     }
   }
 }

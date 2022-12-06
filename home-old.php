@@ -11,27 +11,20 @@
 
   <!-- favicon css стили -->
   <?php include './components/styles_include.php'?>
-  <style>
-    body {
-      background: linear-gradient(277.49deg, rgba(7, 112, 220, 0.8) 0%, rgba(7, 112, 220, 0) 100%), #00163A;
-    }
-  </style>
 </head>
 
 <body class="body">
 
-  <?php
-  // include './components/header.php';
-  ?>
+  <?php include './components/header.php';?>
 
   <main class="main">
 
     <?php
-    // include './components/home-screen.php';
-    // include './components/home-map.php';
-    // include './components/first-of-all.php';
-    // include './components/news.php';
-    // include './components/about.php';
+    include './components/home-screen.php';
+    include './components/home-map.php';
+    include './components/first-of-all.php';
+    include './components/news.php';
+    include './components/about.php';
     ?>
 
 

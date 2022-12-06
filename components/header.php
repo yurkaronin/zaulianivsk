@@ -13,13 +13,10 @@
 
       <!-- Ссылка на личный кабинет -->
       <a class="header__user-link" href="#">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="30" height="30" rx="15" stroke="white" stroke-width="2" />
-          <path
-            d="M16 16C18.234 16 20 14.4756 20 12.2667V10.4C20 8.19113 18.234 6.66669 16 6.66669C13.766 6.66669 12 8.19113 12 10.4V12.2667C12 14.4756 13.766 16 16 16Z"
-            stroke="white" stroke-width="2" stroke-miterlimit="10" />
-          <path d="M24 24V20.6667C24 17.6793 18.6907 16 16 16C13.3093 16 8 17.6793 8 20.6667V24" stroke="white"
-            stroke-width="2" stroke-miterlimit="10" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+          <rect width="30" height="30" x="1" y="1" stroke="#fff" stroke-width="2" rx="15" />
+          <path stroke="#fff" stroke-miterlimit="10" stroke-width="2"
+            d="M16 16c2.234 0 4-1.524 4-3.733V10.4c0-2.209-1.766-3.733-4-3.733S12 8.19 12 10.4v1.867C12 14.476 13.766 16 16 16ZM24 24v-3.333C24 17.679 18.69 16 16 16c-2.69 0-8 1.68-8 4.667V24" />
         </svg>
 
 

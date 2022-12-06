@@ -4,13 +4,13 @@
     <div class="footer__top">
 
       <div class="footer__menu-item footer__menu-item--mod">
-        <a class="footer__link" href="#"><span>Муниципалитеты</span>
+        <a class="footer__link navigation__link--mod" href="#"><span>Муниципалитеты</span>
           <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1L9.24242 9L1 1" stroke="white" stroke-width="2" />
           </svg>
 
         </a>
-        <ul class="footer_navigation-list list-reset">
+        <ul class="footer__navigation-list list-reset">
 
           <li class="footer__navigation-item"><a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
@@ -146,13 +146,13 @@
         </ul>
       </div>
       <div class="footer__menu-item footer__menu-item--mod">
-        <a class="footer__link" href="#"><span>Отрасли</span>
+        <a class="footer__link navigation__link--mod" href="#"><span>Отрасли</span>
           <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1L9.24242 9L1 1" stroke="white" stroke-width="2" />
           </svg>
 
         </a>
-        <ul class="footer_navigation-list footer_navigation-list--mod list-reset">
+        <ul class="footer__navigation-list footer__navigation-list--mod list-reset">
 
           <li class="footer__navigation-item"><a href="#">
               <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
