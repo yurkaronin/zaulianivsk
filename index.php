@@ -47,7 +47,7 @@
           <li><a href="./contacts.php" target="_blank">Контакты</a></li>
           <li><a href="./send-request.php" target="_blank">Подача заявки</a></li>
           <li><a href="./all-news.php" target="_blank">Все новости</a></li>
-          <li><a href="./news-item.php" target="_blank">Новость</a></li>
+          <li><a href="./news-item.php" target="_blank">Отдельная новость</a></li>
 
         </ul>
       </div>
