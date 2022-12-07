@@ -1965,7 +1965,7 @@ input[type=radio].visually-hidden {
 }
 .map--transform {
   position: relative;
-  margin-top: -160px;
+  margin-top: -120px;
   margin-bottom: 0;
 }
 .map_wrapper {
@@ -2206,6 +2206,9 @@ input[type=radio].visually-hidden {
 .hero--min {
   min-height: 256px;
 }
+.hero--mod {
+  min-height: 640px;
+}
 .hero .select-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2276,6 +2279,17 @@ input[type=radio].visually-hidden {
 .content--transform {
   position: relative;
   margin-top: -140px;
+}
+.content--article {
+  position: relative;
+  margin-top: -300px;
+}
+.content__photo {
+  margin-bottom: 38px;
+}
+.content__photo img {
+  display: block;
+  width: 100%;
 }
 .content__slider {
   margin-bottom: 40px;

@@ -8,6 +8,10 @@
     min-height: 256px;
   }
 
+  &--mod {
+    min-height: 640px;
+  }
+
   .select-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
