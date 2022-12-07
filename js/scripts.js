@@ -2,6 +2,12 @@
 const menuButton = document.querySelector('.nav-button');
 const footerLink = document.querySelector('.footer__head-link');
 const mobileLink = document.querySelectorAll('.mobile-menu__link');
+
+// Кастомные селекты
+// инициализация кастомных select в форме регистрации
+const select1 = new ItcCustomSelect('#select-1');
+const select2 = new ItcCustomSelect('#select-2');
+const select3 = new ItcCustomSelect('#select-3');
 // Функции
 // функция подключения скриптов
 function includeFiles(url) {

@@ -37,8 +37,8 @@
     <section class="page-list">
       <div class="wrapper">
         <ul class="list-reset">
-          <li><a href="./bem-collection.php" target="_blank">Коллекция элементов</a></li>
           <li><a href="./home.php" target="_blank">Главная</a></li>
+          <li><a href="./initiatives-all.php" target="_blank">Все инициативы</a></li>
 
         </ul>
       </div>

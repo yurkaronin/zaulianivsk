@@ -20,6 +20,11 @@
   font-family: var(--Inter);
   letter-spacing: 0.03em;
   border-radius: 4px;
+  transition: all 0.3s;
+
+  svg {
+    transition: stroke 0.3s;
+  }
 
   &--blue {
     background-color: var(--Blue);
@@ -50,6 +55,35 @@
     background-color: var(--Red);
     border-color: var(--Red);
     padding: 20px 24px;
+  }
+
+  &--more {
+    background-color: var(--White);
+    border-color: var(--Line);
+    color: var(--DarkGray);
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+
+    svg {
+      margin-right: 16px;
+      path {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover {
+      background-color: var(--Cyan);
+    border-color: var(--Cyan);
+    color: var(--White);
+    svg {
+      path {
+        stroke: var(--White)
+      }
+    }
+    }
   }
 
   @media (max-width: 768px) {

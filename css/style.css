@@ -238,6 +238,10 @@ input[type=radio].visually-hidden {
   font-family: var(--Inter);
   letter-spacing: 0.03em;
   border-radius: 4px;
+  transition: all 0.3s;
+}
+.button svg {
+  transition: stroke 0.3s;
 }
 .button--blue {
   background-color: var(--Blue);
@@ -264,6 +268,30 @@ input[type=radio].visually-hidden {
   background-color: var(--Red);
   border-color: var(--Red);
   padding: 20px 24px;
+}
+.button--more {
+  background-color: var(--White);
+  border-color: var(--Line);
+  color: var(--DarkGray);
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.button--more svg {
+  margin-right: 16px;
+}
+.button--more svg path {
+  transition: all 0.3s;
+}
+.button--more:hover {
+  background-color: var(--Cyan);
+  border-color: var(--Cyan);
+  color: var(--White);
+}
+.button--more:hover svg path {
+  stroke: var(--White);
 }
 @media (max-width: 768px) {
   .button--big {
@@ -789,6 +817,179 @@ input[type=radio].visually-hidden {
   .card-item-long .votes-number span {
     margin-left: 12px;
   }
+}
+
+.tabs {
+  padding-bottom: 50px;
+}
+.tabs__head {
+  padding-top: 48px;
+  padding-bottom: 20px;
+}
+.tabs__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 1px;
+}
+.tabs__button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 18px 32px 24px;
+  color: #0f2c4d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.tabs__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: left 0.3s, right 0.3s, background-color 0.3s, transform 0.3s;
+  pointer-events: none;
+  border-radius: 4px;
+  background-color: var(--Cyan);
+}
+.tabs__button span {
+  margin-right: 12px;
+  position: relative;
+  color: var(--White);
+}
+.tabs__button svg {
+  position: relative;
+  transition: all 0.3s;
+  transform: rotate(0);
+}
+.tabs__button svg path {
+  transition: all 0.3s;
+  stroke: var(--White);
+}
+.tabs__button:hover::before {
+  transform: translate(0, -6px);
+}
+.tabs__button.active {
+  border: 1px solid #cfd8e2;
+  border-radius: 4px;
+  border-bottom: 0;
+}
+.tabs__button.active::before {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: left 0.3s, right 0.3s, background-color 0.3s, transform 0.3s;
+  pointer-events: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.tabs__button.active span {
+  color: #0f2c4d;
+}
+.tabs__button.active svg {
+  transform: rotate(-180deg);
+}
+.tabs__button.active svg path {
+  stroke: var(--Cyan);
+}
+.tabs__filter-item {
+  display: flex;
+  align-items: center;
+}
+.tabs .itc-select__toggle {
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #0f2c4d;
+}
+.tabs .itc-select__dropdown {
+  min-width: 312px;
+}
+.tabs__filter-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(15, 44, 77, 0.7);
+  margin-right: 12px;
+}
+.tabs__item-content {
+  margin-bottom: 32px;
+}
+
+.pagination {
+  margin-bottom: 40px;
+}
+.pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pagination__item {
+  margin-right: 32px;
+}
+.pagination__item:last-child {
+  margin-right: 0;
+}
+.pagination__link {
+  display: block;
+  padding: 18px 30px;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--Line);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--DarkBlue);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.pagination__link:hover {
+  background-color: var(--Cyan);
+  border-color: var(--Cyan);
+  color: var(--White);
+}
+.pagination__link:hover svg path {
+  stroke: var(--White);
+}
+.pagination__link--dotted {
+  border-color: transparent;
+  flex-grow: 2;
+  pointer-events: none;
+}
+.pagination__link--text {
+  border-color: var(--Line);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 224px;
+}
+.pagination__link--prev svg {
+  margin-right: 12px;
+}
+.pagination__link--next svg {
+  margin-left: 12px;
 }
 
 .header {
@@ -1644,6 +1845,79 @@ input[type=radio].visually-hidden {
   .footer__copy {
     text-align: initial;
   }
+}
+
+.hero {
+  background: var(--Grad);
+  padding-top: 135px;
+  min-height: 616px;
+  color: var(--White);
+}
+.hero .select-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 28px;
+}
+.hero .select-grid__group-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.hero .select-grid .itc-select__toggle {
+  padding: 14px 22px;
+  font-size: 18px;
+  color: rgba(15, 44, 77, 0.7);
+  line-height: 1;
+  font-style: normal;
+  border-radius: 4px;
+}
+.hero .select-grid .itc-select__option {
+  color: var(--DarkGrey);
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+}
+.hero .select-grid .itc-select__option span {
+  display: block;
+  padding: 15px 0;
+  padding-right: 24px;
+  margin: 0 24px;
+  margin-right: 0;
+  border-bottom: 1px solid #cfd8e2;
+  flex-grow: 2;
+}
+.hero .select-grid .itc-select__dropdown {
+  top: 100%;
+  border-radius: 0;
+  max-height: 340px;
+}
+.hero .select-grid .itc-select_show .itc-select__toggle {
+  border-radius: 4px 4px 0px 0px;
+}
+.hero .title {
+  text-decoration: none;
+  text-transform: initial;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.14;
+  color: #ffffff;
+}
+.hero + .map {
+  margin-top: -285px;
+}
+
+.itc-select {
+  margin: 0;
+}
+
+.itc-select__toggle::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none'%3E%3Cpath stroke='%2300163A' stroke-linecap='round' stroke-width='2' d='M13 1 7 7 1 1'/%3E%3C/svg%3E");
+  width: 13px;
+  height: 8px;
 }
 
 .header-sticky .header {
