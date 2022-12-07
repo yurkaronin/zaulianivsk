@@ -12,9 +12,9 @@
   <!-- favicon css стили -->
   <?php include './components/styles_include.php'?>
   <style>
-    body {
+    /* body {
       background: linear-gradient(277.49deg, rgba(7, 112, 220, 0.8) 0%, rgba(7, 112, 220, 0) 100%), #00163A;
-    }
+    } */
   </style>
 </head>
 
@@ -27,11 +27,11 @@
   <main class="main">
 
     <?php
-    // include './components/home-screen.php';
-    // include './components/home-map.php';
+    include './components/home-screen.php';
+    include './components/home-map.php';
     include './components/first-of-all.php';
-    // include './components/news.php';
-    // include './components/about.php';
+    include './components/news.php';
+    include './components/about.php';
     ?>
 
 
