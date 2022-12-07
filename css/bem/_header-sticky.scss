@@ -33,9 +33,18 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     .header__grid {
       padding: 12px 0;
     }
   }
+}
+
+.header-sticky.mob-menu-open {
+  .header {
+    background: transparent;
+  }
+  .header__grid {
+    padding: 24px 0;
+}
 }

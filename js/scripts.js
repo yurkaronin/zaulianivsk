@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     headerChange();
   });
   // при клике по кнопке вызова меню - добавляем служебный класс на body
-  if(menuButton) {
+  if (menuButton) {
     menuButton.addEventListener('click', function () {
       document.body.classList.toggle('mob-menu-open');
       menuButton.classList.toggle('open');
@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // показ подкатегорий в шапке сайта при наведении на пункт в меню
-  if (document.body.clientWidth < 1440) {
-    let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+  let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+  if (document.body.clientWidth > 1440) {
     for (let item of headerMenuLink) {
       item.addEventListener('mouseover', function (event) {
         console.log(this);
@@ -58,22 +58,40 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     };
-  }
-  // удаляем атрибут href у ссылок с вложенными пунктами (аккордеоны)
-
-  if (window.innerWidth <= 1440) {
-    let navigationLink = document.querySelectorAll('.navigation__link--mod');
-    for (let item of navigationLink) {
-        item.addEventListener('click', function (e) {
+  } else {
+    for (let item of headerMenuLink) {
+      item.addEventListener('click', function (e) {
+        if (item.classList.contains('navigation__link--mod')) {
+          console.log('Есть класс');
           e.preventDefault();
-          // item.classList.toggle('mob-menu-open');
-          item.parentNode.classList.toggle('active');
-        });
+        // item.classList.toggle('mob-menu-open');
+        item.parentNode.classList.toggle('active');
+        } else {
+          console.log('Неть!');
+          e.preventDefault();
+          item.parentNode.classList.toggle('active-mod');
+        }
+
+      });
+
 
 
     };
+  }
+  // удаляем атрибут href у ссылок с вложенными пунктами (аккордеоны)
 
-  };
+  // if (window.innerWidth <= 1440) {
+  //   let navigationLink = document.querySelectorAll('.navigation__link--mod');
+  //   for (let item of navigationLink) {
+  //     item.addEventListener('click', function (e) {
+  //       e.preventDefault();
+  //       item.parentNode.classList.toggle('active');
+  //     });
+
+
+  //   };
+
+  // };
 
 });
 

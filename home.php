@@ -21,7 +21,7 @@
 <body class="body">
 
   <?php
-  // include './components/header.php';
+  include './components/header.php';
   ?>
 
   <main class="main">
@@ -29,7 +29,7 @@
     <?php
     // include './components/home-screen.php';
     // include './components/home-map.php';
-    // include './components/first-of-all.php';
+    include './components/first-of-all.php';
     // include './components/news.php';
     // include './components/about.php';
     ?>
