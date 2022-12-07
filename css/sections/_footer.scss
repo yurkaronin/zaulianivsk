@@ -151,8 +151,8 @@
       &:hover,
       a:not([href]) {
         &::before {
-          left: -15px;
-          right: -15px;
+          left: -10px;
+          right: -10px;
           background-color: var(--Cyan);
         }
         span {
@@ -182,8 +182,15 @@
         }
       }
     }
+    &__navigation-item a,
+    &__navigation-item a span {
+      font-size: 16px;
+    }
     &__item-group {
       grid-column: 1 / 3;
+    }
+    &__menu-item:last-child &__link {
+      border-bottom: none;
     }
   }
 
@@ -207,6 +214,16 @@
   @media (max-width: 475px) {
     &__navigation-list {
       grid-template-columns: 1fr;
+    }
+    &__link {
+      padding: 17px 0;
+    }
+    &__bottom {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    &__copy {
+      text-align: initial;
     }
   }
 }
