@@ -44,7 +44,6 @@
         </div>
 
       </div>
-      </div>
     </section>
 
     <section class="content content--transform">

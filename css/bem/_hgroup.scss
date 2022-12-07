@@ -1,0 +1,18 @@
+.hgroup {
+  font-size: 64px;
+  small {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: inherit;
+    display: block;
+    margin-bottom: 16px;
+  }
+}

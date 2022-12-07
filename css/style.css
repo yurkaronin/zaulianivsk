@@ -1085,6 +1085,23 @@ input[type=radio].visually-hidden {
   color: var(--White);
 }
 
+.hgroup {
+  font-size: 64px;
+}
+.hgroup small {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 30px;
+}
+.hgroup small:last-child {
+  margin-bottom: 0;
+}
+.hgroup a {
+  font-size: inherit;
+  display: block;
+  margin-bottom: 16px;
+}
+
 .inner-page {
   padding-bottom: 40px;
 }

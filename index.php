@@ -41,13 +41,16 @@
       <div class="wrapper">
         <ul class="list-reset">
           <li><a href="./home.php" target="_blank">Главная</a></li>
+
           <li><a href="./initiatives-all.php" target="_blank">Все инициативы</a></li>
           <li><a href="./initiatives-example.php" target="_blank">Пример названия одной из инициатив</a></li>
 
-          <li><a href="./contacts.php" target="_blank">Контакты</a></li>
           <li><a href="./send-request.php" target="_blank">Подача заявки</a></li>
+
           <li><a href="./all-news.php" target="_blank">Все новости</a></li>
           <li><a href="./news-item.php" target="_blank">Отдельная новость</a></li>
+
+          <li><a href="./contacts.php" target="_blank">Контакты</a></li>
 
         </ul>
       </div>
