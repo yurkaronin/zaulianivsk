@@ -3,7 +3,7 @@
     <div class="header__grid">
       <!-- Логотип  -->
       <div class="header__logo">
-        <a href="#">
+        <a href="./index.php">
           <img src="./img/logo/1.png" alt="Логотип ЗаУльяновск" width="261">
         </a>
       </div>

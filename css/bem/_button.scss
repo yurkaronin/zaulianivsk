@@ -26,6 +26,17 @@
     transition: stroke 0.3s;
   }
 
+  &:hover {
+    background-color: transparent;
+    border-color: var(--Line);
+    color: var(--DarkBlue);
+    svg {
+      path {
+        stroke: var(--Cyan);
+      }
+    }
+  }
+
   &--blue {
     background-color: var(--Blue);
     border-color: var(--Blue);
@@ -33,15 +44,23 @@
 
   &--transparent {
     background-color: transparent;
-    color: var(--green);
+    border-color: var(--Line);
+    color: var(--DarkBlue);
   }
 
   &--icon {
     display: flex;
     align-items: center;
     svg {
-      margin-left: 10px;
+      margin-right: 16px;
+      path {
+        stroke: var(--White);
+      }
     }
+  }
+  &--left {
+    margin-right: auto;
+    padding: 28px 40px;
   }
 
   &--big {

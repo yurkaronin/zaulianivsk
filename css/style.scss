@@ -19,6 +19,7 @@
 @import "bem/grid-list";
 
 @import "bem/wrapper";
+@import "bem/container";
 @import "bem/button";
 @import "bem/title";
 @import "bem/accordion";
@@ -33,8 +34,10 @@
 @import "bem/card-item-long";
 @import "bem/tabs";
 @import "bem/pagination";
+@import "bem/voices-button";
 
 
+@import "sections/inner-page";
 @import "sections/main";
 @import "sections/header";
 @import "sections/navigation";
@@ -44,6 +47,7 @@
 @import "sections/news";
 @import "sections/footer";
 @import "sections/hero";
+@import "sections/content";
 
 @import "bem/header-sticky";
 @import "bem/mob-menu-open";

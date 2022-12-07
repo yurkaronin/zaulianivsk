@@ -1,0 +1,32 @@
+.voices-button {
+  display: flex;
+  align-items: flex-end;
+  &__number {
+    margin: 0;
+    margin-right: 32px;
+    line-height: 1;
+    color: rgba(#ffffff, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+
+    span {
+      display: block;
+      font-weight: 900;
+      font-size: 56px;
+      color: var(--White);
+    }
+  }
+  &__buttons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .button {
+      font-size: 14px;
+      padding: 22px 45px;
+      background-color: var(--Blue);
+      border-color: var(--Blue);
+      color: var(--White);
+    }
+  }
+}

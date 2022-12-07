@@ -3,11 +3,17 @@ const menuButton = document.querySelector('.nav-button');
 const footerLink = document.querySelector('.footer__head-link');
 const mobileLink = document.querySelectorAll('.mobile-menu__link');
 
-// Кастомные селекты
-// инициализация кастомных select в форме регистрации
-const select1 = new ItcCustomSelect('#select-1');
-const select2 = new ItcCustomSelect('#select-2');
-const select3 = new ItcCustomSelect('#select-3');
+// инициализация кастомных select
+if(document.querySelector('#select-1')) {
+  const select1 = new ItcCustomSelect('#select-1');
+};
+if(document.querySelector('#select-2')) {
+  const select2 = new ItcCustomSelect('#select-2');
+};
+if(document.querySelector('#select-3')) {
+  const select3 = new ItcCustomSelect('#select-3');
+};
+
 // Функции
 // функция подключения скриптов
 function includeFiles(url) {
@@ -80,24 +86,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
       });
 
-
-
     };
-  }
-  // удаляем атрибут href у ссылок с вложенными пунктами (аккордеоны)
-
-  // if (window.innerWidth <= 1440) {
-  //   let navigationLink = document.querySelectorAll('.navigation__link--mod');
-  //   for (let item of navigationLink) {
-  //     item.addEventListener('click', function (e) {
-  //       e.preventDefault();
-  //       item.parentNode.classList.toggle('active');
-  //     });
+  };
 
 
-  //   };
+  if(document.querySelector('#slider-photo')) {
+    const photoSlider = new Swiper('#slider-photo .swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 32,
+      // If we need pagination
+      pagination: {
+        el: '#slider-photo .swiper-pagination',
+        type: "fraction",
+      },
 
-  // };
+      // Navigation arrows
+      navigation: {
+        nextEl: '#slider-photo .swiper-button-next',
+        prevEl: '#slider-photo .swiper-button-prev',
+      },
+
+    });
+  };
 
 });
 
