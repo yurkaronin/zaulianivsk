@@ -153,11 +153,22 @@
 
       margin: 0 40px;
     }
+
+    &__wrapper {
+      padding-top: 43px;
+    }
+    __wrapper:after {
+      width: calc(100% - 80px);
+      margin: 0 40px;
+    }
   }
 
   @media (max-width: 500px) {
     &__link {
-
+      margin: 0 20px;
+    }
+    &__wrapper:after {
+      width: calc(100% - 40px);
       margin: 0 20px;
     }
   }

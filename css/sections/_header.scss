@@ -101,7 +101,6 @@
       position: fixed;
       top: 0;
       width: 100%;
-      // height: calc(100vh - 100px);
       height: 100vh;
       overflow: auto;
       padding-top: 96px;
@@ -122,6 +121,12 @@
     &__logo {
       max-width: 255px;
     }
+    &__grid {
+      padding: 12px 0;
+    }
+    &__navigation {
+      padding-top: 80px;
+    }
   }
 
   @media (max-width: 500px) {
@@ -138,5 +143,6 @@
         flex-shrink: 0;
       }
     }
+
   }
 }
