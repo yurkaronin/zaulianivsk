@@ -1,0 +1,103 @@
+.article-list {
+  margin: 0;
+  list-style: none;
+  padding: 48px 0;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(1fr);
+}
+
+.article-review {
+  &__grid {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  &__image {
+    border-radius: 4px;
+    overflow: hidden;
+    max-height: 232px;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--DarkGrey);
+    margin: 0;
+    margin-bottom: 16px;
+    display: block;
+    opacity: 0.7;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--DarkGrey);
+    margin-bottom: 40px;
+    transition: color 0.3s;
+  }
+  &__text {
+    font-family: var(--Merriweather);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--DarkGrey);
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  &__link {
+    padding: 16px;
+    background-color: transparent;
+    // border: 1px solid #cfd8e2;
+    border-radius: 4px;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transition: left 0.3s, right 0.3s, top 0.3s, bottom 0.3s, background-color 0.3s, box-shadow 0.3s;
+      pointer-events: none;
+      border-radius: 4px;
+      background-color: var(--White);
+      border: 1px solid #cfd8e2;
+      z-index: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      &:after {
+        left: -11px;
+        right: -11px;
+        top: -5px;
+        bottom: -5px;
+        background-color: var(--White);
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .article-review__title {
+        color: var(--Cyan);
+      }
+    }
+  }
+}

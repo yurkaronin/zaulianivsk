@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Пример названия одной из инициатив</title>
+  <title>Подача заявки на инициативу</title>
   <meta name="description" content="">
 
   <!-- favicon css стили -->
@@ -19,128 +19,157 @@
   include './components/header.php';
   ?>
 
-  <main class="main inner-page">
+  <main class="main">
     <section class="hero">
       <div class="wrapper">
-        <!-- блок с табами и подписью  -->
-        <div class="tags-with-label">
-          <ul class="tags-with-label__list">
-            <li class="tags-with-label__item"><a href="#" class="tags-with-label__link"><span>Барыш</span></a></li>
-            <li class="tags-with-label__item"><a href="#" class="tags-with-label__link"><span>Образование</span></a>
-            </li>
-          </ul>
-          <p class="tags-with-label__text">24 апреля, 2022 <b>до 24 августа, 2023</b></p>
-        </div>
-        <!-- заголовок  -->
-        <h1 class="title title--border">Пример названия одной из инициатив, название может быть длинным</h1>
-        <!-- голоса и кнопка  -->
-        <div class="voices-button">
-          <p class="voices-button__number">Количество голосов: <span>24 123</span></p>
-          <ul class="voices-button__buttons">
-            <li>
-              <a class="button" href="#" data-swiper-parallax="-340"><span>Проголосовать</span></a>
-            </li>
-          </ul>
-        </div>
 
-      </div>
-    </section>
-
-    <section class="content content--transform">
-      <div class="wrapper">
         <div class="container">
-          <div class="content__slider" id="slider-photo">
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <a class="swiper-slide__link" href="./img/photo/1.jpg" data-fancybox="gallery--photo"
-                    data-caption="Подпись к фотографии">
-                    <img src="./img/photo/1.jpg" width="992" alt="подпись к фотографии">
-                  </a>
+
+          <h1 class="title">Подача заявки на инициативу</h1>
+          <!-- форма обратной связи  -->
+          <div class="form">
+            <form action="">
+              <div class="form__grid form__grid--mod">
+
+                <div class="form__item">
+                  <!-- селект  -->
+                  <figure class="itc-select" id="select-4">
+                    <figcaption class="form__label">Выберите муниципалитет:<small>*</small>
+                    </figcaption>
+                    <button type="button" class="itc-select__toggle" name="Выбор муниципалитета" value
+                      data-select="toggle" data-index="-1">Все</button>
+
+
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Все</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 1</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 2</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 3</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 4</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 5</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </figure>
+
                 </div>
 
-                <div class="swiper-slide">
-                  <a class="swiper-slide__link" href="./img/photo/1.jpg" data-fancybox="gallery--photo"
-                    data-caption="Подпись к фотографии">
-                    <img src="./img/photo/1.jpg" width="992" alt="подпись к фотографии">
-                  </a>
+                <div class="form__item">
+                  <!-- селект  -->
+                  <figure class="itc-select" id="select-5">
+                    <figcaption class="form__label">Выберите отрасль:<small>*</small>
+                    </figcaption>
+                    <button type="button" class="itc-select__toggle" name="Выбор муниципалитета" value
+                      data-select="toggle" data-index="-1">Все отрасли</button>
+
+
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Все отрасли</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 1</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 2</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 3</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 4</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 5</span>
+                        </li>
+                        <li class="itc-select__option" data-select="option" data-value="Название1" data-index="0">
+                          <span>Название 6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </figure>
                 </div>
 
-                <div class="swiper-slide">
-                  <a class="swiper-slide__link" href="./img/photo/1.jpg" data-fancybox="gallery--photo"
-                    data-caption="Подпись к фотографии">
-                    <img src="./img/photo/1.jpg" width="992" alt="подпись к фотографии">
-                  </a>
+                <div class="form__item">
+                  <label class="form__label">Название инициативы:<small>*</small></label>
+                  <input class="form__input" type="text" name="initiative" placeholder="Введите название инициативы">
                 </div>
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button swiper-button-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" fill="none">
-                  <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="M8 13 2 7l6-6" />
-                </svg>
-              </div>
+                <div class="form__item">
+                  <label class="form__label">Описание инициативы:<small>*</small></label>
+                  <textarea class="form__input" name="message" cols="30" rows="10"
+                    placeholder="Опишите Вашу инициативу"></textarea>
+                </div>
 
-              <div class="swiper-button swiper-button-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" fill="none">
-                  <path stroke="#fff" stroke-linecap="round" stroke-width="2" d="m1 1 6 6-6 6" />
-                </svg>
+                <div class="form__item">
+                  <label class="form__label">Введите адрес или поставьте точку на карте:</label>
+                  <input class="form__input" type="text" name="initiative" placeholder="Введите адрес">
+                </div>
+
+                <div class="form__item map">
+                  <!-- интерактивная карта  -->
+                  <div class="map__wrapper">
+                    <div id="map" class="map__content"></div>
+                  </div>
+                </div>
+                <!-- загрузка файла  -->
+                <div class="form__item">
+                  <input class="form__input" type="file" name="file" placeholder="Прикрепить фото">
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label" for="">Ваше имя:<small>*</small></label>
+                  <input class="form__input" type="text" name="name" placeholder="Введите ФИО полностью">
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label">Телефон<small>*</small></label>
+                  <input class="form__input" type="tel" name="telephone" placeholder="Введите Ваш телефон">
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label">E-mail:</label>
+                  <input class="form__input" type="email" name="email address" placeholder="Для отправки ответа">
+                </div>
+
+                <div class="form__item">
+                  <label class="accept" for="check-accept">
+                    <input class="visually-hidden" type="checkbox" name="confirm" id="check-accept" required checked>
+                    <p>Даю согласие на обработку <a href="#" target="_blank">персональных данных</a>
+                    </p>
+                  </label>
+                </div>
+
+
+
+                <div class="form__item">
+                  <button class="button form__button" type="submit"><span>Написать сообщение</span></button>
+                </div>
+
+                <p class="form__details"><small>*</small> - Обязательные для заполнения поля</p>
               </div>
-            </div>
+            </form>
           </div>
-          <div class="content__text">
-            <p>Значительную часть своего свободного времени граждане проводят во дворах и общественных пространствах. От
-              того, насколько комфортно гражданам в этих пространствах, зависит их настроение, самочувствие,
-              работоспособность.</p>
-
-            <p>Современная городская среда должна быть, прежде всего, безопасной, комфортной и разнообразной, поэтому
-              создание в этой области благоприятных условий для граждан, повышение удовлетворенности граждан качеством
-              городской среды стало одним из приоритетов Партии.</p>
-
-            <p>Данная тема нашла свое выражение в Народной программе Партии. В нее включено обязательство Партии
-              активнее вовлекать жителей в решение вопросов местного значения, используя процедуру электронных публичных
-              слушаний, а также уделять особое внимание благоустройству дворов.</p>
-
-            <p>Проект «Городская среда» направлен на обеспечение широкого общественного участия в ходе благоустройства
-              дворовых и общественных территорий в городах и населенных пунктах с численностью проживания населения
-              более тысячи человек, на обеспечение общественного контроля на каждом этапе реализации программ
-              благоустройства.</p>
-          </div>
-
-
         </div>
+
       </div>
     </section>
-
-    <section class="map">
-      <div class="wrapper">
-        <div class="container">
-          <div class="map__wrapper">
-            <!-- тут будет карта  -->
-            <div id="map" class="map__content"></div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section class="content__footer">
-      <div class="wrapper">
-        <div class="container">
-          <a href="#" class="button button--icon button--left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" fill="none">
-              <path stroke="#0770DC" stroke-linecap="round" stroke-width="2" d="m7.5 13-6-6 6-6" />
-            </svg>
-            <span>Назад к списку</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-
 
   </main>
 

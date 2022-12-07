@@ -35,6 +35,7 @@
       <div class="tabs__filter-item">
         <span class="tabs__filter-label">Сортировать:</span>
         <div class="tabs__filter-item">
+
           <figure class="itc-select" id="select-3">
             <button type="button" class="itc-select__toggle" name="Выбор муниципалитета" value="" data-select="toggle"
               data-index="-1">По большинству голосов</button>

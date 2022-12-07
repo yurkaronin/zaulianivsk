@@ -13,6 +13,12 @@ if(document.querySelector('#select-2')) {
 if(document.querySelector('#select-3')) {
   const select3 = new ItcCustomSelect('#select-3');
 };
+if(document.querySelector('#select-4')) {
+  const select4 = new ItcCustomSelect('#select-4');
+};
+if(document.querySelector('#select-5')) {
+  const select5 = new ItcCustomSelect('#select-5');
+};
 
 // Функции
 // функция подключения скриптов

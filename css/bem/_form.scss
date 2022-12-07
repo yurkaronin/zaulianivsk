@@ -4,6 +4,10 @@
     display: grid;
     gap: 14px;
     grid-template-columns: 1fr;
+
+    &--mod {
+      gap: 24px;
+    }
   }
   &__item {
     width: 100%;
@@ -96,6 +100,48 @@
 
     input[type="checkbox"]:checked + p::before {
       background-image: url(../img/icons/checkbox-on.svg);
+    }
+  }
+
+  .itc-select .form__label {
+    margin-bottom: 10px;
+  }
+
+  .itc-select__toggle {
+    padding: 14px 22px;
+    font-size: 18px;
+    color: rgba(#0f2c4d, 0.7);
+    line-height: 1;
+    font-style: normal;
+    border-radius: 4px;
+  }
+
+  .itc-select__option {
+    color: var(--DarkGrey);
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+
+    span {
+      display: block;
+      padding: 15px 0;
+      padding-right: 24px;
+      margin: 0 24px;
+      margin-right: 0;
+      border-bottom: 1px solid #cfd8e2;
+      // width: calc(100% - 16px);
+      flex-grow: 2;
+    }
+  }
+
+  .itc-select__dropdown {
+    top: 100%;
+    border-radius: 0;
+    max-height: 340px;
+  }
+  .itc-select_show {
+    .itc-select__toggle {
+      border-radius: 4px 4px 0px 0px;
     }
   }
 }

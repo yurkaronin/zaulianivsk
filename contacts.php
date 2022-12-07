@@ -46,7 +46,7 @@
 
                 <div class="form__item">
                   <label class="form__label" for="">E-mail:</label>
-                  <input class="form__input" type="email" name="email address" placeholder="Введите Ваш телефон">
+                  <input class="form__input" type="email" name="email address" placeholder="Для отправки ответа">
                 </div>
                 <div class="form__item">
                   <label class="form__label">Сообщение:<small>*</small></label>

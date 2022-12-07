@@ -4,6 +4,10 @@
   min-height: 616px;
   color: var(--White);
 
+  &--min {
+    min-height: 256px;
+  }
+
   .select-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,9 +23,6 @@
       margin-bottom: 12px;
     }
 
-    .itc-select__dropdown {
-      // padding-right: 20px;
-    }
     .itc-select__toggle {
       padding: 14px 22px;
       font-size: 18px;

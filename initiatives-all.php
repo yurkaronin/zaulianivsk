@@ -11,11 +11,7 @@
 
   <!-- favicon css стили -->
   <?php include './components/styles_include.php'?>
-  <style>
-  /* body {
-      background: linear-gradient(277.49deg, rgba(7, 112, 220, 0.8) 0%, rgba(7, 112, 220, 0) 100%), #00163A;
-    } */
-  </style>
+
 </head>
 
 <body class="body">
