@@ -19,10 +19,10 @@
   include './components/header.php';
   ?>
 
-  <main class="main inner-page">
+  <main class="main">
     <section class="hero">
       <div class="wrapper">
-        <div class="container">
+        <div class="container container--mod">
 
           <h1 class="title hgroup">
             <small>Если у Вас есть вопросы звоните</small>
@@ -30,9 +30,48 @@
             <small>или напишите нам</small>
           </h1>
           <!-- форма обратной связи  -->
-          <form action="">
+          <div class="form">
+            <form action="">
+              <div class="form__grid">
 
-          </form>
+                <div class="form__item">
+                  <label class="form__label" for="">Ваше имя:<small>*</small></label>
+                  <input class="form__input" type="text" name="name" placeholder="Введите ФИО полностью">
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label" for="">Телефон<small>*</small></label>
+                  <input class="form__input" type="tel" name="telephone" placeholder="Введите Ваш телефон">
+                </div>
+
+                <div class="form__item">
+                  <label class="form__label" for="">E-mail:</label>
+                  <input class="form__input" type="email" name="email address" placeholder="Введите Ваш телефон">
+                </div>
+                <div class="form__item">
+                  <label class="form__label">Сообщение:<small>*</small></label>
+                  <textarea class="form__input" name="message" cols="30" rows="10"
+                    placeholder="Для отправки ответа"></textarea>
+                </div>
+                <div class="form__item">
+                  <label class="accept" for="check-accept">
+                    <input class="visually-hidden" type="checkbox" name="confirm" id="check-accept" required checked>
+                    <p>Даю согласие на обработку <a href="#" target="_blank">персональных данных</a>
+                    </p>
+                  </label>
+                </div>
+
+
+
+                <div class="form__item">
+                  <button class="button form__button" type="submit"><span>Написать сообщение</span></button>
+                </div>
+
+                <p class="form__details"><small>*</small> - Обязательные для заполнения поля</p>
+              </div>
+            </form>
+          </div>
+
         </div>
 
 

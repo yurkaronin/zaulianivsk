@@ -1,0 +1,101 @@
+.form {
+  padding: 30px 0 43px;
+  &__grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr;
+  }
+  &__item {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    font-family: var(--Inter);
+    color: #b2bdcc;
+
+    small {
+      color: var(--Cyan);
+      // font-size: 16px;
+    }
+  }
+  &__input {
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    font-family: var(--Inter);
+    color: var(--DarkGrey);
+    background-color: var(--White);
+    border-radius: 4px;
+    padding: 13px 22px;
+    border: none;
+  }
+  &__details {
+
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--White);
+    margin-top: 11px;
+
+    small {
+      color: var(--Cyan);
+    }
+  }
+  &__button {
+    max-width: 100%;
+    background-color: var(--Red) !important;
+    border-color: var(--Red) !important;
+    padding: 20px 24px;
+    color: var(--White) !important;
+  }
+
+  .accept {
+    margin: 0;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+
+    p {
+      margin: 0;
+    }
+    a {
+      color: var(--Cyan);
+      position: relative;
+      display: inline-block;
+      &.contact-us .accept a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--Cyan);
+      }
+    }
+    input[type="checkbox"] + p::before {
+      content: "";
+      background-image: url(../img/icons/checkbox-off.svg);
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+    }
+
+    input[type="checkbox"]:checked + p::before {
+      background-image: url(../img/icons/checkbox-on.svg);
+    }
+  }
+}

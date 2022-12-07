@@ -1,4 +1,8 @@
 .container {
   max-width: 992px;
   margin: 0 auto;
+
+  &--mod {
+    max-width: 736px;
+  }
 }

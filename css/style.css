@@ -220,6 +220,9 @@ input[type=radio].visually-hidden {
   max-width: 992px;
   margin: 0 auto;
 }
+.container--mod {
+  max-width: 736px;
+}
 
 .button {
   position: relative;
@@ -1100,6 +1103,101 @@ input[type=radio].visually-hidden {
   font-size: inherit;
   display: block;
   margin-bottom: 16px;
+}
+
+.form {
+  padding: 30px 0 43px;
+}
+.form__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+.form__item {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+.form__label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  font-family: var(--Inter);
+  color: #b2bdcc;
+}
+.form__label small {
+  color: var(--Cyan);
+}
+.form__input {
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  font-family: var(--Inter);
+  color: var(--DarkGrey);
+  background-color: var(--White);
+  border-radius: 4px;
+  padding: 13px 22px;
+  border: none;
+}
+.form__details {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--White);
+  margin-top: 11px;
+}
+.form__details small {
+  color: var(--Cyan);
+}
+.form__button {
+  max-width: 100%;
+  background-color: var(--Red) !important;
+  border-color: var(--Red) !important;
+  padding: 20px 24px;
+  color: var(--White) !important;
+}
+.form .accept {
+  margin: 0;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.form .accept p {
+  margin: 0;
+}
+.form .accept a {
+  color: var(--Cyan);
+  position: relative;
+  display: inline-block;
+}
+.form .accept a.contact-us .accept a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--Cyan);
+}
+.form .accept input[type=checkbox] + p::before {
+  content: "";
+  background-image: url(../img/icons/checkbox-off.svg);
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+.form .accept input[type=checkbox]:checked + p::before {
+  background-image: url(../img/icons/checkbox-on.svg);
 }
 
 .inner-page {
