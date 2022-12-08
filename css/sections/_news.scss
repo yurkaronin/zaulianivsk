@@ -19,6 +19,7 @@
     img {
       width: 100%;
       display: block;
+      margin: 0;
     }
   }
   &__date {
@@ -30,11 +31,12 @@
     color: rgba(15, 44, 77, 0.7);
     margin-bottom: 16px;
   }
-  .title {
+  &__title {
     font-weight: 700;
     font-size: 24px;
     color: var(--DarkBlue);
     margin: 0;
+    display: block;
     text-transform: initial;
     transition: color 0.3s;
   }
@@ -45,7 +47,7 @@
     .news__image {
       scale: 1.05;
     }
-    .title {
+    .news__title {
       color: var(--Cyan);
     }
   }

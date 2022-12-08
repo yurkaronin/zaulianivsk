@@ -92,6 +92,23 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   };
 
+  // аккордеоны в подвале
+  let footerMenuLink = document.querySelectorAll('.footer-link-mod');
+  for (let item of footerMenuLink) {
+    item.addEventListener('click', function (e) {
+      if (item.classList.contains('link-mod')) {
+        e.preventDefault();
+        // item.classList.toggle('mob-menu-open');
+        item.parentNode.classList.toggle('active');
+      } else {
+        e.preventDefault();
+        item.parentNode.classList.toggle('active-mod');
+      }
+
+    });
+
+  };
+
 
   if (document.querySelector('#slider-photo')) {
     const photoSlider = new Swiper('#slider-photo .swiper', {
@@ -115,48 +132,50 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Табы
+  if (document.querySelector('#js-tabs')) {
+    // кнопка показа таба
+    const tab = document.getElementsByClassName('tabs__button');
+    // блок с содержимым таба
+    const tabContent = document.getElementsByClassName('tabContent');
+    // прячем все вкладки добавляя классы
+    hideTabsContent(0);
+    // и показываем первый таб и активируем вкладку
+    showTabsContent(0);
 
-  // кнопка показа таба
-  const tab = document.getElementsByClassName('tabs__button');
-  // блок с содержимым таба
-  const tabContent = document.getElementsByClassName('tabContent');
-  // прячем все вкладки добавляя классы
-  hideTabsContent(0);
-  // и показываем первый таб и активируем вкладку
-  showTabsContent(0);
+    document.getElementById('js-tabs').addEventListener('click', function (event) {
+      // Временная переменная для сохранения элемента по которому кликнули
+      var target = event.target;
 
-  document.getElementById('js-tabs').addEventListener('click', function (event) {
-    // Временная переменная для сохранения элемента по которому кликнули
-    var target = event.target;
-
-    if (target.className == 'tabs__button') {
-      for (var i = 0; i < tab.length; i++) {
-        if (target == tab[i]) {
-          showTabsContent(i);
-          break;
+      if (target.className == 'tabs__button') {
+        for (var i = 0; i < tab.length; i++) {
+          if (target == tab[i]) {
+            showTabsContent(i);
+            break;
+          }
         }
       }
-    }
-  });
+    });
 
-  function hideTabsContent(a) {
-    for (var i = a; i < tabContent.length; i++) {
+    function hideTabsContent(a) {
+      for (var i = a; i < tabContent.length; i++) {
 
-      tabContent[i].classList.remove('show');
-      tabContent[i].classList.add("hide");
-      tab[i].classList.remove('active');
-    }
-  }
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add("hide");
+        tab[i].classList.remove('active');
+      }
+    };
 
-  function showTabsContent(b) {
-    if (tabContent[b].classList.contains('hide')) {
-      hideTabsContent(0);
+    function showTabsContent(b) {
+      if (tabContent[b].classList.contains('hide')) {
+        hideTabsContent(0);
 
-      tab[b].classList.add('active');
-      tabContent[b].classList.remove('hide');
-      tabContent[b].classList.add('show');
-    }
-  }
+        tab[b].classList.add('active');
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+      }
+    };
+  };
+
 
 });
 

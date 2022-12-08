@@ -44,15 +44,12 @@
       color: var(--Cyan);
 
       svg {
+        transition: transform 0.3s;
         path {
           stroke: var(--Cyan);
         }
       }
     }
-  }
-
-  &__menu-item--mod &__link svg {
-    transform: rotate(0);
   }
 
   &__bottom {
@@ -163,9 +160,41 @@
     }
   }
 
+  &__navigation-list {
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px 32px;
+    transition: height 0.3s;
+  }
+
+  // раскрытый аккордеон
+  .active-mod {
+    .footer__link svg {
+      transform: rotate(0);
+    }
+    .footer__navigation-list {
+      opacity: 1;
+      pointer-events: initial;
+      visibility: initial;
+      height: initial;
+      padding: 18px 0 34px;
+
+      &--mod {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
   @media (max-width: 1440px) {
     &__top {
       grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
     }
     &__navigation-list {
       padding-bottom: 0;

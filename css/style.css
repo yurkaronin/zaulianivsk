@@ -1975,6 +1975,7 @@ input[type=radio].visually-hidden {
 .news__image img {
   width: 100%;
   display: block;
+  margin: 0;
 }
 .news__date {
   display: block;
@@ -1985,11 +1986,12 @@ input[type=radio].visually-hidden {
   color: rgba(15, 44, 77, 0.7);
   margin-bottom: 16px;
 }
-.news .title {
+.news__title {
   font-weight: 700;
   font-size: 24px;
   color: var(--DarkBlue);
   margin: 0;
+  display: block;
   text-transform: initial;
   transition: color 0.3s;
 }
@@ -1998,9 +2000,9 @@ input[type=radio].visually-hidden {
 .news a:focus .news__image {
   scale: 1.05;
 }
-.news a:hover .title,
-.news a:active .title,
-.news a:focus .title {
+.news a:hover .news__title,
+.news a:active .news__title,
+.news a:focus .news__title {
   color: var(--Cyan);
 }
 
@@ -2046,11 +2048,11 @@ input[type=radio].visually-hidden {
 .footer__link:hover {
   color: var(--Cyan);
 }
+.footer__link:hover svg {
+  transition: transform 0.3s;
+}
 .footer__link:hover svg path {
   stroke: var(--Cyan);
-}
-.footer__menu-item--mod .footer__link svg {
-  transform: rotate(0);
 }
 .footer__bottom {
   padding: 40px 0;
@@ -2141,9 +2143,35 @@ input[type=radio].visually-hidden {
   position: relative;
   color: var(--White);
 }
+.footer__navigation-list {
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 32px;
+  transition: height 0.3s;
+}
+.footer .active-mod .footer__link svg {
+  transform: rotate(0);
+}
+.footer .active-mod .footer__navigation-list {
+  opacity: 1;
+  pointer-events: initial;
+  visibility: initial;
+  height: initial;
+  padding: 18px 0 34px;
+}
+.footer .active-mod .footer__navigation-list--mod {
+  grid-template-columns: repeat(2, 1fr);
+}
 @media (max-width: 1440px) {
   .footer__top {
     grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
   }
   .footer__navigation-list {
     padding-bottom: 0;
@@ -2409,7 +2437,7 @@ input[type=radio].visually-hidden {
 .about__image:hover {
   scale: 1.05;
 }
-.about .title {
+.about .lead {
   font-size: 24px;
   text-transform: none;
   font-weight: 700;

@@ -3,8 +3,8 @@
 
     <div class="footer__top">
 
-      <div class="footer__menu-item footer__menu-item--mod">
-        <a class="footer__link navigation-link-mod" href="#"><span>Муниципалитеты</span>
+      <div class="footer__menu-item active-mod">
+        <a class="footer__link footer-link-mod" href="#"><span>Муниципалитеты</span>
           <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1L9.24242 9L1 1" stroke="white" stroke-width="2" />
           </svg>
@@ -145,8 +145,8 @@
 
         </ul>
       </div>
-      <div class="footer__menu-item footer__menu-item--mod">
-        <a class="footer__link navigation-link-mod" href="#"><span>Отрасли</span>
+      <div class="footer__menu-item active-mod">
+        <a class="footer__link footer-link-mod" href="#"><span>Отрасли</span>
           <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 1L9.24242 9L1 1" stroke="white" stroke-width="2" />
           </svg>
