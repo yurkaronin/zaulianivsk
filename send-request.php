@@ -159,7 +159,7 @@
 
 
                 <div class="form__item">
-                  <button class="button form__button" type="submit"><span>Написать сообщение</span></button>
+                  <button class="button button--mega" type="submit"><span>Написать сообщение</span></button>
                 </div>
 
                 <p class="form__details"><small>*</small> - Обязательные для заполнения поля</p>

@@ -1,10 +1,11 @@
-<section class="tabs">
+<section class="tabs" id="js-tabs">
   <div class="wrapper">
     <!-- Шапка табов - кнопки  -->
     <div class="tabs__head">
       <ul class="tabs__list">
         <li class="tabs__item">
-          <button class="tabs__button active">
+          <!-- Кнопка таба -->
+          <button class="tabs__button tab">
             <span>Голосование</span>
             <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 1L7 7L1 0.999999" stroke="white" stroke-width="2" stroke-linecap="round" />
@@ -13,7 +14,8 @@
           </button>
         </li>
         <li class="tabs__item">
-          <button class="tabs__button">
+          <!-- Кнопка таба -->
+          <button class="tabs__button tab">
             <span>В работе</span>
             <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 1L7 7L1 0.999999" stroke="white" stroke-width="2" stroke-linecap="round" />
@@ -21,7 +23,8 @@
           </button>
         </li>
         <li class="tabs__item">
-          <button class="tabs__button">
+          <!-- Кнопка таба -->
+          <button class="tabs__button tab">
             <span>завершенные</span>
             <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 1L7 7L1 0.999999" stroke="white" stroke-width="2" stroke-linecap="round" />
@@ -62,11 +65,72 @@
       </div>
     </div>
 
-    <!-- Содержимое табов  -->
-    <div class="tabs__content">
-      <div class="tabs__item-content">
-        <ul class="card-list card-list--two list-reset">
-          <?php
+    <!-- Содержимое табов  контентные блоки-->
+
+    <!-- Содержимое таба группа-->
+    <div class="tabs__item-content tabContent">
+      <ul class="card-list card-list--two list-reset">
+
+        <li class="card-item-long">
+          <div class="card-item-long__left">
+            <div class="card-item-long__desc">
+              <div class="tags-with-label">
+                <ul class="tag-list list-reset">
+                  <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                  <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                </ul>
+                <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
+              </div>
+              <a href="" class="card-item-long__link">
+                <h3 class="title">Пример названия одной из главных инициатив</h3>
+              </a>
+              <p class="text">Значительную часть своего свободного времени граждане проводят во дворах и общественных
+                пространствах. От того, насколько комфортно гражданам в этих пространствах, зависит их настроение,
+                самочувствие, работоспособность.</p>
+            </div>
+          </div>
+          <div class="card-item-long__right">
+            <p class="votes-number"><span class="votes-number__text">Количество голосов:</span><span
+                class="votes-number__big">240</span></p>
+            <a class="button button--blue" href="#"><span>Проголосовать</span></a>
+          </div>
+        </li>
+
+        <li class="card-item-long">
+          <div class="card-item-long__left">
+            <div class="card-item-long__image">
+              <img src="./img/card-item/1.jpg" alt="фото" width="336">
+            </div>
+            <div class="card-item-long__desc">
+              <div class="tags-with-label">
+                <ul class="tag-list list-reset">
+                  <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                  <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                </ul>
+                <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
+              </div>
+              <a href="" class="card-item-long__link">
+                <h3 class="title">Пример названия одной из главных инициатив</h3>
+              </a>
+              <p class="text">Значительную часть своего свободного времени граждане проводят во дворах и общественных
+                пространствах. От того, насколько комфортно гражданам в этих пространствах, зависит их настроение,
+                самочувствие, работоспособность.</p>
+            </div>
+          </div>
+          <div class="card-item-long__right">
+            <p class="votes-number"><span class="votes-number__text">Количество голосов:</span><span
+                class="votes-number__big">12 240</span></p>
+            <a class="button button--blue" href="#"><span>Проголосовать</span></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Содержимое таба группа-->
+    <div class="tabs__item-content tabContent">
+      <h3 class="title">Второй блок контента - таб 2</h3>
+      <ul class="card-list card-list--two list-reset">
+        <?php
             include './components/repeat/card-item-long-1.php';
             include './components/repeat/card-item-long-2.php';
             include './components/repeat/card-item-long-1.php';
@@ -74,9 +138,24 @@
             include './components/repeat/card-item-long-1.php';
             include './components/repeat/card-item-long-2.php';
           ?>
-        </ul>
-      </div>
+      </ul>
     </div>
+
+    <!-- Содержимое таба группа-->
+    <div class="tabs__item-content tabContent">
+      <h3 class="title">Третий блок контента - таб 3</h3>
+      <ul class="card-list card-list--two list-reset">
+        <?php
+            include './components/repeat/card-item-long-1.php';
+            include './components/repeat/card-item-long-2.php';
+            include './components/repeat/card-item-long-1.php';
+            include './components/repeat/card-item-long-2.php';
+            include './components/repeat/card-item-long-1.php';
+            include './components/repeat/card-item-long-2.php';
+          ?>
+      </ul>
+    </div>
+
     <!-- мега кнопка  -->
     <a class="button button--more" href="#">
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" fill="none">

@@ -4,19 +4,19 @@ const footerLink = document.querySelector('.footer__head-link');
 const mobileLink = document.querySelectorAll('.mobile-menu__link');
 
 // инициализация кастомных select
-if(document.querySelector('#select-1')) {
+if (document.querySelector('#select-1')) {
   const select1 = new ItcCustomSelect('#select-1');
 };
-if(document.querySelector('#select-2')) {
+if (document.querySelector('#select-2')) {
   const select2 = new ItcCustomSelect('#select-2');
 };
-if(document.querySelector('#select-3')) {
+if (document.querySelector('#select-3')) {
   const select3 = new ItcCustomSelect('#select-3');
 };
-if(document.querySelector('#select-4')) {
+if (document.querySelector('#select-4')) {
   const select4 = new ItcCustomSelect('#select-4');
 };
-if(document.querySelector('#select-5')) {
+if (document.querySelector('#select-5')) {
   const select5 = new ItcCustomSelect('#select-5');
 };
 
@@ -41,7 +41,6 @@ function headerChange() {
 // Основная рабочая область
 document.addEventListener("DOMContentLoaded", () => {
   // подключаем файлы тут
-  // includeFiles("./js/parts/accordion.js");
   includeFiles("./js/parts/sliders.js");
   includeFiles("./js/parts/yandex.map.js");
 
@@ -82,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (item.classList.contains('navigation__link--mod')) {
           console.log('Есть класс');
           e.preventDefault();
-        // item.classList.toggle('mob-menu-open');
-        item.parentNode.classList.toggle('active');
+          // item.classList.toggle('mob-menu-open');
+          item.parentNode.classList.toggle('active');
         } else {
           console.log('Неть!');
           e.preventDefault();
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  if(document.querySelector('#slider-photo')) {
+  if (document.querySelector('#slider-photo')) {
     const photoSlider = new Swiper('#slider-photo .swiper', {
       // Optional parameters
       loop: true,
@@ -116,6 +115,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
   };
+
+  // Табы
+
+  // кнопка показа таба
+  const tab = document.getElementsByClassName('tabs__button');
+  // блок с содержимым таба
+  const tabContent = document.getElementsByClassName('tabContent');
+  // прячем все вкладки добавляя классы
+  hideTabsContent(0);
+  // и показываем первый таб и активируем вкладку
+  showTabsContent(0);
+
+  document.getElementById('js-tabs').addEventListener('click', function (event) {
+    // Временная переменная для сохранения элемента по которому кликнули
+    var target = event.target;
+
+    if (target.className == 'tabs__button') {
+      for (var i = 0; i < tab.length; i++) {
+        if (target == tab[i]) {
+          showTabsContent(i);
+          break;
+        }
+      }
+    }
+  });
+
+  function hideTabsContent(a) {
+    for (var i = a; i < tabContent.length; i++) {
+
+      tabContent[i].classList.remove('show');
+      tabContent[i].classList.add("hide");
+      tab[i].classList.remove('active');
+    }
+  }
+
+  function showTabsContent(b) {
+    if (tabContent[b].classList.contains('hide')) {
+      hideTabsContent(0);
+
+      tab[b].classList.add('active');
+      tabContent[b].classList.remove('hide');
+      tabContent[b].classList.add('show');
+    }
+  }
 
 });
 

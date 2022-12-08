@@ -11,9 +11,9 @@
         <div class="tags-with-label">
           <ul class="tag-list list-reset">
             <li class="tag-list__item" data-swiper-parallax="-750"><a href="#"
-                class="tag-list__link"><span>Барыш</span></a></li>
+                class="tag-list__link tag-list__link--mod"><span>Барыш</span></a></li>
             <li class="tag-list__item" data-swiper-parallax="-650"><a href="#"
-                class="tag-list__link"><span>Образование</span></a></li>
+                class="tag-list__link tag-list__link--mod"><span>Образование</span></a></li>
           </ul>
           <p data-swiper-parallax="-550">24 апреля, 2022 <b>до 24 августа, 2023</b></p>
         </div>
@@ -22,17 +22,20 @@
 
       <div class="home-screen__details-center">
         <!-- заголовок  -->
-        <h1 class="title" data-swiper-parallax="-400">Пример названия одной из главных инициатив, название может быть
-          длинным</h1>
+        <h3 class="title" data-swiper-parallax="-400">Пример названия одной из главных инициатив, название может быть
+          длинным</h3>
       </div>
 
-      <div class="home-screen__details-bottom">
-        <!-- блок с текстом - кол-во  -->
-            <p class="votes-number" data-swiper-parallax="-360">Количество голосов:<span data-swiper-parallax="-460">24 123</span></p>
-        <!-- кнопки  -->
-        <ul class="home-screen__buttons list-reset">
-          <li><a class="button button--blue" href="#" data-swiper-parallax="-340"><span>Проголосовать</span></a></li>
-          <li><a class="button" href="#" data-swiper-parallax="-680"><span>Подробнее</span></a></li>
+      <div class="voices-button">
+        <p class="voices-button__number" data-swiper-parallax="-360">Количество голосов: <span
+            data-swiper-parallax="-460">24 123</span></p>
+        <ul class="voices-button__buttons">
+          <li>
+            <a class="button button--blue" href="#" data-swiper-parallax="-370"><span>Проголосовать</span></a>
+          </li>
+          <li>
+            <a class="button" href="#" data-swiper-parallax="-680"><span>Подробнее</span></a>
+          </li>
         </ul>
       </div>
 

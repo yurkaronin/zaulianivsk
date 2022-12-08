@@ -18,16 +18,57 @@
     line-height: 1;
     color: var(--DarkGrey);
     padding: 8px 16px;
-    background: var(--White);
-    border-radius: 4px;
     text-align: center;
-    border: 1px solid;
-    border-color: var(--Line);
+    position: relative;
+    background-color: transparent;
+    border-radius: 4px;
 
-    span {
-      font-family: inherit;
-      color: inherit;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, color 0.3s, border-color 0.3s, background-color 0.3s;
+      border: 1px solid;
+      pointer-events: none;
+      border-radius: 4px;
+      border-color: var(--Line);
+      background-color: var(--White);
     }
 
+    span {
+      color: var(--DarkGrey);
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      span {
+        color: var(--White);
+      }
+      &::before {
+        left: -4px;
+        right: -4px;
+        top: -4px;
+        bottom: -4px;
+        border-color: var(--Cyan);
+        background: var(--Cyan);
+      }
+    }
+
+    &--mod {
+      color: var(--White) !important;
+      span {
+        color: var(--White) !important;
+      }
+
+      &::before {
+        border-color: var(--Cyan) !important;
+        background: var(--Cyan) !important;
+      }
+
+    }
   }
 }

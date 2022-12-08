@@ -1,5 +1,9 @@
 .tabs {
   padding-bottom: 50px;
+
+  .map--transform {
+    margin-top: -270px;
+  }
   &__head {
     padding-top: 48px;
     padding-bottom: 20px;
@@ -47,12 +51,14 @@
       margin-right: 12px;
       position: relative;
       color: var(--White);
+      pointer-events: none;
     }
 
     svg {
       position: relative;
       transition: all 0.3s;
       transform: rotate(0);
+      pointer-events: none;
       path {
         transition: all 0.3s;
         stroke: var(--White);
@@ -63,6 +69,7 @@
         transform: translate(0, -6px);
       }
     }
+
 
     // активный таб
     &.active {
@@ -91,8 +98,6 @@
     }
   }
 
-  &__filter {
-  }
   &__filter-item {
     display: flex;
     align-items: center;
@@ -119,4 +124,12 @@
   &__item-content {
     margin-bottom: 32px;
   }
+
+}
+
+#js-tabs .hide {
+  display: none;
+}
+#js-tabs .show {
+  display: block;
 }
