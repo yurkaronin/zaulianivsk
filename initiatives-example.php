@@ -130,9 +130,9 @@
     <section class="content__footer">
       <div class="wrapper">
         <div class="container">
-          <a href="#" class="button button--icon button--left">
+          <a href="#" class="button button--left button--white">
             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" fill="none">
-              <path stroke="#0770DC" stroke-linecap="round" stroke-width="2" d="m7.5 13-6-6 6-6" />
+              <path stroke="#ffffff" stroke-linecap="round" stroke-width="2" d="m7.5 13-6-6 6-6" />
             </svg>
             <span>Назад к списку</span>
           </a>

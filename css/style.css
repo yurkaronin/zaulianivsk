@@ -232,9 +232,9 @@ input[type=radio].visually-hidden {
   max-width: max-content;
   text-decoration: none;
   padding: 14px 24px;
-  background-color: var(--Cyan);
+  background-color: transparent;
   border: 1px solid;
-  border-color: var(--Cyan);
+  border-color: transparent;
   cursor: pointer;
   box-shadow: none;
   color: var(--White);
@@ -248,39 +248,50 @@ input[type=radio].visually-hidden {
   border-radius: 4px;
   transition: all 0.3s;
 }
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+  border: 1px solid;
+  pointer-events: none;
+  border-radius: 4px;
+  background-color: var(--Cyan);
+  border-color: var(--Cyan);
+}
+.button span {
+  position: relative;
+}
 .button svg {
   transition: stroke 0.3s;
+  position: relative;
+  margin-right: 16px;
 }
-.button:hover {
-  background-color: transparent;
-  border-color: var(--Line);
-  color: var(--DarkBlue);
+.button svg path {
+  transition: all 0.3s;
+}
+.button:hover::before {
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+}
+.button:hover span {
+  color: var(--White);
 }
 .button:hover svg path {
-  stroke: var(--Cyan);
+  stroke: var(--White);
 }
-.button--blue {
+.button--blue::before {
   background-color: var(--Blue);
   border-color: var(--Blue);
 }
-.button--transparent {
-  background-color: transparent;
-  border-color: var(--Line);
-  color: var(--DarkBlue);
-}
-.button--icon {
-  display: flex;
-  align-items: center;
-}
-.button--icon svg {
-  margin-right: 16px;
-}
-.button--icon svg path {
-  stroke: var(--White);
-}
 .button--left {
   margin-right: auto;
-  padding: 28px 40px;
+  padding: 20px 40px;
 }
 .button--big {
   padding: 28px 40px;
@@ -289,13 +300,32 @@ input[type=radio].visually-hidden {
 }
 .button--mega {
   max-width: 100%;
-  background-color: var(--Red);
-  border-color: var(--Red);
   padding: 20px 24px;
 }
-.button--more {
+.button--mega::before {
+  background-color: var(--Red);
+  border-color: var(--Red);
+}
+.button--white {
+  color: var(--DarkGray);
+}
+.button--white::before {
   background-color: var(--White);
   border-color: var(--Line);
+}
+.button--white svg path {
+  stroke: var(--Cyan);
+}
+.button--white:hover {
+  color: var(--DarkGray);
+}
+.button--white:hover span {
+  color: var(--DarkGray);
+}
+.button--white:hover svg path {
+  stroke: var(--Cyan);
+}
+.button--more {
   color: var(--DarkGray);
   display: flex;
   align-items: center;
@@ -303,16 +333,19 @@ input[type=radio].visually-hidden {
   padding: 20px 24px;
   margin-bottom: 16px;
 }
-.button--more svg {
-  margin-right: 16px;
+.button--more::before {
+  background-color: var(--White);
+  border-color: var(--Line);
 }
 .button--more svg path {
   transition: all 0.3s;
 }
 .button--more:hover {
+  color: var(--White);
+}
+.button--more:hover::before {
   background-color: var(--Cyan);
   border-color: var(--Cyan);
-  color: var(--White);
 }
 .button--more:hover svg path {
   stroke: var(--White);
