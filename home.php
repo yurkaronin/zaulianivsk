@@ -149,7 +149,7 @@
           <h2 class="title">Немного о нас</h2>
         </div>
 
-        <div class="about__grid about">
+        <div class="about__grid">
           <div class="about__image">
             <img src="./img/about-us/1.jpg" alt="Фотография" width="608">
           </div>

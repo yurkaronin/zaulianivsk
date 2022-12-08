@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-  // показ подкатегорий в шапке сайта при наведении на пункт в меню
+  // показ подкатегорий при наведении на пункт в меню
   let headerMenuLink = document.querySelectorAll('.header .navigation__link');
   if (document.body.clientWidth > 1440) {
     for (let item of headerMenuLink) {
@@ -78,13 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     for (let item of headerMenuLink) {
       item.addEventListener('click', function (e) {
-        if (item.classList.contains('navigation__link--mod')) {
-          console.log('Есть класс');
+        if (item.classList.contains('navigation-link-mod')) {
           e.preventDefault();
           // item.classList.toggle('mob-menu-open');
           item.parentNode.classList.toggle('active');
         } else {
-          console.log('Неть!');
           e.preventDefault();
           item.parentNode.classList.toggle('active-mod');
         }

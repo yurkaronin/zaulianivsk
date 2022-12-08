@@ -4,7 +4,7 @@
     <ul class="navigation__list list-reset">
 
       <li class="navigation__item">
-        <a class="navigation__link current-page navigation__link--mod">
+        <a class="navigation__link current-page navigation-link-mod">
           <span>Муниципалитеты</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" fill="none"><path stroke="#fff" stroke-width="2" d="m1 1 8 7.758L1 17"/></svg>
         </a>
@@ -13,7 +13,7 @@
       </li>
 
       <li class="navigation__item">
-        <a class="navigation__link navigation__link--mod" href="#">
+        <a class="navigation__link navigation-link-mod" href="#">
           <span>Отрасли</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" fill="none"><path stroke="#fff" stroke-width="2" d="m1 1 8 7.758L1 17"/></svg>
         </a>
