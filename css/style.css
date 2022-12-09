@@ -1284,6 +1284,43 @@ input[type=radio].visually-hidden {
   color: var(--Cyan);
 }
 
+.map {
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.map--transform {
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 0;
+}
+.map_wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.map__content {
+  height: 464px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .map__content {
+    height: 320px;
+  }
+}
+@media (max-width: 1024px) {
+  .map {
+    display: none;
+  }
+}
+
+/** dealer-detail */
+[class*=copyrights-pane] {
+  display: none !important;
+}
+
 .inner-page {
   padding-bottom: 40px;
 }
@@ -1907,43 +1944,6 @@ input[type=radio].visually-hidden {
     width: initial;
     margin-left: initial;
   }
-}
-
-.map {
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-.map--transform {
-  position: relative;
-  margin-top: -120px;
-  margin-bottom: 0;
-}
-.map_wrapper {
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
-.map__content {
-  height: 464px;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .map__content {
-    height: 320px;
-  }
-}
-@media (max-width: 1024px) {
-  .map {
-    display: none;
-  }
-}
-
-/** dealer-detail */
-[class*=copyrights-pane] {
-  display: none !important;
 }
 
 .first-of-all .card-list {
