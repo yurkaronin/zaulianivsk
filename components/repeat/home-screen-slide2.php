@@ -19,8 +19,7 @@
         <p data-swiper-parallax="-550">24 апреля, 2022 <b>до 24 августа, 2023</b></p>
       </div>
       <!-- заголовок  -->
-      <h3 class="title" data-swiper-parallax="-400">Пример названия одной из главных инициатив, название может быть
-        длинным</h3>
+      <h3 class="title" data-swiper-parallax="-400">Пример названия одной инициатиы</h3>
 
       <div class="voices-button">
         <p class="voices-button__number" data-swiper-parallax="-360">Количество голосов: <span

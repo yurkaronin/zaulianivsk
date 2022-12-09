@@ -53,3 +53,23 @@
 
 @import "bem/header-sticky";
 @import "bem/mob-menu-open";
+
+@media (max-width: 1440px) {
+  .header-sticky .header .navigation__link.active {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  .navigation__item.active .navigation-link-mod {
+    span {
+      color: var(--Blue);
+    }
+    svg {
+      path {
+        stroke: var(--Blue);
+      }
+    }
+  }
+  .navigation__item.active-mod {
+    background-color: transparent;
+  }
+}
