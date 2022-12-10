@@ -1728,7 +1728,7 @@ input[type=radio].visually-hidden {
   background: var(--Grad);
   color: var(--White);
   padding-top: 10%;
-  min-height: 900px;
+  min-height: 970px;
 }
 .home-screen__slide {
   position: relative;
