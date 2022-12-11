@@ -1918,7 +1918,7 @@ input[type=radio].visually-hidden {
 }
 .home-screen__slide {
   display: grid;
-  grid-template-columns: 4fr 8fr 48px;
+  grid-template-columns: 483px 1fr 48px;
   gap: 32px;
   align-items: center;
 }
@@ -2025,6 +2025,20 @@ input[type=radio].visually-hidden {
 }
 .home-screen .swiper-button-prev:after {
   display: none;
+}
+.home-screen .tags-with-label {
+  margin-bottom: 16px;
+}
+.home-screen .title {
+  line-height: 1.14;
+  padding-bottom: 32px;
+  margin-bottom: 43px;
+}
+.home-screen .voices-button__number span {
+  margin-top: 6px;
+}
+.home-screen .voices-button {
+  align-items: center;
 }
 @media (max-width: 1440px) {
   .home-screen__details .title {
