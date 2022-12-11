@@ -1,6 +1,7 @@
 .footer {
   background-color: #00163a;
   color: var(--White);
+  overflow: hidden;
 
   &__top {
     display: grid;
@@ -195,6 +196,7 @@
     &__top {
       grid-template-columns: 1fr 1fr;
       gap: 0 32px;
+      padding-top: 14px;
     }
     &__navigation-list {
       padding-bottom: 0;
@@ -221,6 +223,12 @@
     &__menu-item:last-child &__link {
       border-bottom: none;
     }
+    .footer__link {
+      padding: 26px 0
+    }
+    .footer__navigation-item a {
+      padding: 12px 0;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -239,11 +247,8 @@
     &__navigation-list {
       grid-template-columns: repeat(2, 1fr);
     }
-  }
-  @media (max-width: 475px) {
-    &__navigation-list {
-      grid-template-columns: 1fr;
-    }
+
+
     &__link {
       padding: 17px 0;
     }
@@ -253,6 +258,15 @@
     }
     &__copy {
       text-align: initial;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__navigation-list {
+      grid-template-columns: 1fr;
+    }
+    & .active-mod &__navigation-list--mod {
+      grid-template-columns: 1fr;
     }
   }
 }

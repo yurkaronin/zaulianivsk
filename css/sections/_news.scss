@@ -52,4 +52,17 @@
       color: var(--Cyan);
     }
   }
+
+  @media (max-width: 1440px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
 }
