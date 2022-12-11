@@ -519,7 +519,7 @@ input[type=radio].visually-hidden {
 .tag-list {
   display: flex;
 }
-.tag-list__item {
+.tag-list li {
   margin-right: 12px;
 }
 .tag-list__link {
@@ -532,51 +532,19 @@ input[type=radio].visually-hidden {
   font-size: 14px;
   line-height: 1;
   color: var(--DarkGrey);
-  padding: 8px 16px;
+  padding: 9px 16px;
   text-align: center;
   position: relative;
-  background-color: transparent;
-  border-radius: 4px;
-}
-.tag-list__link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, color 0.3s, border-color 0.3s, background-color 0.3s;
   border: 1px solid;
-  pointer-events: none;
   border-radius: 4px;
   border-color: var(--Line);
   background-color: var(--White);
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
-.tag-list__link span {
-  color: var(--DarkGrey);
-  position: relative;
-  transition: color 0.3s;
-}
-.tag-list__link:hover span {
+.tag-list__link:hover {
   color: var(--White);
-}
-.tag-list__link:hover::before {
-  left: -4px;
-  right: -4px;
-  top: -4px;
-  bottom: -4px;
   border-color: var(--Cyan);
   background: var(--Cyan);
-}
-.tag-list__link--mod {
-  color: var(--White) !important;
-}
-.tag-list__link--mod span {
-  color: var(--White) !important;
-}
-.tag-list__link--mod::before {
-  border-color: var(--Cyan) !important;
-  background: var(--Cyan) !important;
 }
 
 .card-list {
@@ -641,6 +609,10 @@ input[type=radio].visually-hidden {
   flex-wrap: wrap;
   color: var(--White);
 }
+.tags-with-label__text {
+  margin: 0;
+  color: inherit;
+}
 .tags-with-label__list {
   margin: 0;
   padding: 0;
@@ -695,7 +667,7 @@ input[type=radio].visually-hidden {
   max-width: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 9fr 3fr;
+  grid-template-columns: 1fr 350px;
   align-items: center;
   position: relative;
 }
@@ -717,7 +689,7 @@ input[type=radio].visually-hidden {
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 16px;
+  padding: 28px 41px 35px;
   padding-right: 32px;
   border-right: 1px solid;
   border-color: var(--Line);
@@ -728,33 +700,69 @@ input[type=radio].visually-hidden {
   width: 100%;
   margin-right: 32px;
   flex-shrink: 0;
+  transition: all 0.3s;
 }
 .card-item-long__image img {
   display: block;
   width: 100%;
   margin-bottom: 0;
 }
+.card-item-long__image:hover {
+  transform: scale(1.05);
+}
 .card-item-long__desc {
   flex-grow: 2;
   position: relative;
 }
 .card-item-long__right {
-  padding: 16px;
-  padding-left: 40px;
+  padding: 0 40px;
   position: relative;
 }
 .card-item-long .votes-number {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .card-item-long .button {
   max-width: 100%;
-  margin-right: 24px;
+  margin: 0;
 }
 .card-item-long__link .title {
   transition: color 0.3s;
+  margin-bottom: 22px;
+}
+.card-item-long__link .title--mod {
+  padding-bottom: 14px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.card-item-long__link .title--mod::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background-color: var(--Line);
 }
 .card-item-long__link:hover .title {
   color: var(--Cyan);
+}
+.card-item-long .text {
+  margin: 0;
+}
+.card-item-long .tags-with-label {
+  color: rgba(15, 44, 77, 0.7);
+  margin-bottom: 3px;
+}
+.card-item-long .tags-with-label__text {
+  font-size: 14px;
+}
+.card-item-long--mod .card-item-long__left {
+  padding: 17px 17px 15px;
+  align-items: flex-start;
+}
+.card-item-long--mod .card-item-long__desc {
+  padding: 11px 0px;
 }
 .card-item-long:hover::before {
   left: -11px;
@@ -1350,7 +1358,7 @@ input[type=radio].visually-hidden {
 .header__grid {
   display: grid;
   grid-template-columns: 262px 1fr 24px;
-  gap: 40px;
+  gap: 18px;
   align-items: center;
   transition: padding 0.6s, height 0.6s;
 }
@@ -1461,7 +1469,7 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 44px 21px 40px;
+  padding: 43px 20px 40px;
   background-color: transparent;
   transition: background-color 0.3s linear, color 0.3s, padding 0.3s;
   color: var(--White);
@@ -1727,7 +1735,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
   background: var(--Grad);
   color: var(--White);
-  padding-top: 10%;
+  padding-top: 11%;
   min-height: 970px;
 }
 .home-screen__slide {
@@ -2251,7 +2259,6 @@ input[type=radio].visually-hidden {
   pointer-events: none;
   visibility: hidden;
   height: 0;
-  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px 32px;

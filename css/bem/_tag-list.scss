@@ -1,11 +1,8 @@
 .tag-list {
   display: flex;
-  &__item {
-    margin-right: 12px;
 
-    // &:last-child {
-    //   margin-right: 0;
-    // }
+  li {
+    margin-right: 12px;
   }
   &__link {
     display: flex;
@@ -17,58 +14,21 @@
     font-size: 14px;
     line-height: 1;
     color: var(--DarkGrey);
-    padding: 8px 16px;
+    padding: 9px 16px;
     text-align: center;
     position: relative;
-    background-color: transparent;
+    border: 1px solid;
     border-radius: 4px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, color 0.3s, border-color 0.3s, background-color 0.3s;
-      border: 1px solid;
-      pointer-events: none;
-      border-radius: 4px;
-      border-color: var(--Line);
-      background-color: var(--White);
-    }
-
-    span {
-      color: var(--DarkGrey);
-      position: relative;
-      transition: color 0.3s;
-    }
+    border-color: var(--Line);
+    background-color: var(--White);
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 
     &:hover {
-      span {
-        color: var(--White);
-      }
-      &::before {
-        left: -4px;
-        right: -4px;
-        top: -4px;
-        bottom: -4px;
-        border-color: var(--Cyan);
-        background: var(--Cyan);
-      }
-    }
-
-    &--mod {
-      color: var(--White) !important;
-      span {
-        color: var(--White) !important;
-      }
-
-      &::before {
-        border-color: var(--Cyan) !important;
-        background: var(--Cyan) !important;
-      }
+      color: var(--White);
+      border-color: var(--Cyan);
+      background: var(--Cyan);
 
     }
+
   }
 }

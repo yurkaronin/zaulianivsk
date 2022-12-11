@@ -1,4 +1,4 @@
-<li class="card-item-long">
+<li class="card-item-long card-item-long--mod">
 
   <div class="card-item-long__left">
 
@@ -10,14 +10,14 @@
 
       <div class="tags-with-label">
         <ul class="tag-list list-reset">
-          <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-          <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+          <li><a href="#" class="tag-list__link">Ульяновск</a></li>
+          <li><a href="#" class="tag-list__link">Управление</a></li>
         </ul>
-        <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
+        <p class="tags-with-label__text">24 апреля, 2022 <b>до 24 августа, 2023</b></p>
       </div>
 
       <a href="" class="card-item-long__link">
-        <h3 class="title">Пример названия одной из главных инициатив</h3>
+        <h3 class="title title--mod">Пример названия одной из главных инициатив, название может быть длинным в несколько строк</h3>
       </a>
       <p class="text">Значительную часть своего свободного времени граждане проводят во дворах и общественных
         пространствах. От того, насколько комфортно гражданам в этих пространствах, зависит их настроение,

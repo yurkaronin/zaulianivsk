@@ -2,11 +2,8 @@
   max-width: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 9fr 3fr;
+  grid-template-columns: 1fr 350px;
   align-items: center;
-  // border: 1px solid;
-  // border-color: var(--Line);
-  // border-radius: 4px;
   position: relative;
   &::before {
     content: "";
@@ -23,11 +20,13 @@
     z-index: 0;
   }
 
+
+
   &__left {
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 16px;
+    padding: 28px 41px 35px;
     padding-right: 32px;
     border-right: 1px solid;
     border-color: var(--Line);
@@ -38,38 +37,82 @@
     width: 100%;
     margin-right: 32px;
     flex-shrink: 0;
+    transition: all 0.3s;
     img {
       display: block;
       width: 100%;
       margin-bottom: 0;
     }
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__desc {
+    // padding: 28px 41px 35px;
     flex-grow: 2;
     position: relative;
   }
   &__right {
-    padding: 16px;
-    padding-left: 40px;
+    padding: 0 40px;
     position: relative;
   }
   .votes-number {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .button {
     max-width: 100%;
-    margin-right: 24px;
+    margin: 0;
   }
   &__link {
     .title {
       transition: color 0.3s;
+      margin-bottom: 22px;
+      &--mod {
+        padding-bottom: 14px;
+        margin-bottom: 10px;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 40px;
+          height: 1px;
+          background-color: var(--Line);
+        }
+      }
     }
-   &:hover {
-    .title {
-      color: var(--Cyan);
+    &:hover {
+      .title {
+        color: var(--Cyan);
+      }
     }
-   }
+  }
+
+  .text {
+    margin: 0;
+  }
+  .tags-with-label {
+    color: rgba(#0f2c4d, 0.7);
+    margin-bottom: 3px;
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  &--mod {
+    // grid-template-columns: 9fr 3fr;
+  }
+  &--mod &__left {
+    padding: 17px 17px 15px;
+    align-items: flex-start;
+  }
+  &--mod &__desc {
+    padding: 11px 0px;
   }
 
   &:hover {
@@ -81,7 +124,6 @@
       background-color: var(--White);
       box-shadow: 4px 4px 12px rgb(0 0 0 / 20%);
     }
-
   }
 
   @media (max-width: 1320px) {

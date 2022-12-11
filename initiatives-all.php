@@ -115,8 +115,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>
@@ -144,8 +144,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>
@@ -178,8 +178,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>
@@ -207,8 +207,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>
@@ -240,8 +240,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>
@@ -269,8 +269,8 @@
                 <div class="card-item-long__desc">
                   <div class="tags-with-label">
                     <ul class="tag-list list-reset">
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
-                      <li class="tag-list__item"><a href="#" class="tag-list__link"><span>Образование</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Барыш</span></a></li>
+                      <li><a href="#" class="tag-list__link"><span>Образование</span></a></li>
                     </ul>
                     <p>24 апреля, 2022 <b>до 24 августа, 2023</b></p>
                   </div>

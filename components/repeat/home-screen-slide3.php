@@ -11,10 +11,10 @@
       <!-- верхний блок с табами и подписью  -->
       <div class="tags-with-label">
         <ul class="tag-list list-reset">
-          <li class="tag-list__item" data-swiper-parallax="-750"><a href="#"
-              class="tag-list__link tag-list__link--mod"><span>Барыш</span></a></li>
-          <li class="tag-list__item" data-swiper-parallax="-650"><a href="#"
-              class="tag-list__link tag-list__link--mod"><span>Образование</span></a></li>
+          <li data-swiper-parallax="-750"><a href="#"
+              class="tag-list__link"><span>Барыш</span></a></li>
+          <li data-swiper-parallax="-350"><a href="#"
+              class="tag-list__link"><span>Образование</span></a></li>
         </ul>
         <p data-swiper-parallax="-550">24 апреля, 2022 <b>до 24 августа, 2023</b></p>
       </div>

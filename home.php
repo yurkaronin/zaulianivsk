@@ -26,7 +26,7 @@
     <section class="home-screen">
       <div class="wrapper">
         <!-- SEO Заголовок, который хорошо дополняет логическую структуру страницы, но отсутствует в дизайне  -->
-        <h2 class="visually-hidden">Новые инициативы</h2>
+        <h2 class="visually-hidden">Актуальные инициативы</h2>
 
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">

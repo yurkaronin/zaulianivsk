@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   color: var(--White);
 
+  &__text {
+    margin: 0;
+    color: inherit;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
