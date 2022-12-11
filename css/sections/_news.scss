@@ -12,7 +12,7 @@
     display: block;
   }
   &__image {
-    margin-bottom: 24px;
+    margin-bottom: 27px;
     border-radius: 4px;
     overflow: hidden;
     transition: scale 0.3s;
@@ -29,11 +29,12 @@
     font-size: 14px;
     line-height: 1;
     color: rgba(15, 44, 77, 0.7);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   &__title {
     font-weight: 700;
     font-size: 24px;
+    line-height: 1.36;
     color: var(--DarkBlue);
     margin: 0;
     display: block;
