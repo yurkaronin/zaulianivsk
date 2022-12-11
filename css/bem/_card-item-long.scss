@@ -50,7 +50,6 @@
   }
 
   &__desc {
-    // padding: 28px 41px 35px;
     flex-grow: 2;
     position: relative;
   }
@@ -104,9 +103,6 @@
     }
   }
 
-  &--mod {
-    // grid-template-columns: 9fr 3fr;
-  }
   &--mod &__left {
     padding: 17px 17px 15px;
     align-items: flex-start;
@@ -124,6 +120,23 @@
       background-color: var(--White);
       box-shadow: 4px 4px 12px rgb(0 0 0 / 20%);
     }
+  }
+
+  @media (max-width: 1440px) {
+
+    &__right {
+      padding: 20px 40px;
+    }
+    &__left {
+      padding: 28px 40px 22px;
+    }
+    .button {
+      max-width: max-content;
+      padding: 20px 65px;
+  }
+  .card-item-long__right {
+    align-items: flex-start;
+  }
   }
 
   @media (max-width: 1320px) {

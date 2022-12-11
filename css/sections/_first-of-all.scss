@@ -9,4 +9,24 @@
   .map--transform {
     margin-top: -17%;
   }
+
+  @media (max-width: 1440px) {
+    .map--transform {
+      margin-top: -15%;
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .map--transform {
+      margin-top: -23%;
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .map--transform {
+      margin-top: -29%;
+    }
+  }
 }

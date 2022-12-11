@@ -26,9 +26,9 @@
     grid-template-columns: 262px 1fr 24px;
     gap: 18px;
     align-items: center;
-    // border-bottom: 1px solid;
-    // border-color: rgba(#ffffff, 0.15);
     transition: padding 0.6s, height 0.6s;
+    border-bottom: 1px solid;
+    border-color: rgba(#ffffff, 0.15);
   }
   &__logo {
     position: relative;
@@ -83,7 +83,7 @@
       grid-template-columns: 1fr 32px 32px;
       gap: 32px;
       align-items: center;
-      padding: 23px 0;
+      padding: 27px 0 21px;
       transition: padding 0.3s;
     }
     &__logo {
