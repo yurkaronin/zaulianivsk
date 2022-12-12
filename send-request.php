@@ -20,7 +20,7 @@
   ?>
 
   <main class="main">
-    <section class="hero">
+    <section class="hero hero--send-page">
       <div class="wrapper">
 
         <div class="container">

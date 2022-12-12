@@ -100,4 +100,13 @@
       }
     }
   }
+
+  @media (max-width: 900px) {
+    .article-review__grid {
+      grid-template-columns: 1fr;
+    }
+    .article-review__image {
+      max-height: initial;
+    }
+  }
 }

@@ -65,17 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.body.clientWidth > 1440) {
     for (let item of headerMenuLink) {
       item.addEventListener('mouseover', function (event) {
-        console.log(this);
         this.classList.add('active');
       });
 
       item.addEventListener('mouseout', function (event) {
         this.classList.remove('active');
-        console.log(this);
       });
 
     };
   } else {
+
     for (let item of headerMenuLink) {
       item.addEventListener('click', function (e) {
         if (item.classList.contains('navigation-link-mod')) {
@@ -94,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // аккордеоны в подвале
   let footerMenuLink = document.querySelectorAll('.footer-link-mod');
+  if (document.body.clientWidth < 550) {
+    console.log('111');
+    // сворачиваем аккордеоны намобилках
+    for (let item of footerMenuLink) {
+      item.parentNode.classList.remove('active-mod');
+      item.parentNode.classList.remove('active');
+    };
+  }
   for (let item of footerMenuLink) {
     item.addEventListener('click', function (e) {
       if (item.classList.contains('link-mod')) {

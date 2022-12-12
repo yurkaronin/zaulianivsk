@@ -1,17 +1,8 @@
 .hero {
   background: var(--Grad);
   padding-top: 135px;
-  // min-height: 616px;
   color: var(--White);
   padding-bottom: 350px;
-
-  &--min {
-    // min-height: 256px;
-  }
-
-  &--mod {
-    // min-height: 640px;
-  }
 
   .title {
     text-decoration: none;
@@ -24,6 +15,14 @@
 
   & + .map {
     margin-top: -285px;
+  }
+
+  &--send-page {
+    padding-bottom: 50px;
+
+    .title {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -95,11 +94,19 @@
   }
   .hero {
     padding-bottom: 280px;
+
+    &--send-page {
+      padding-bottom: 50px;
+    }
   }
 }
 @media (max-width: 650px) {
   .hero {
     padding-bottom: 230px;
+
+    &--send-page {
+      padding-bottom: 40px;
+    }
   }
 
   .hero .title {
@@ -124,12 +131,25 @@
   }
 }
 
+@media (max-width: 550px) {
+  .hero--mod {
+    padding-bottom: 185px;
+
+    .title {
+      font-size: 35px !important;
+    }
+  }
+}
+
 @media (max-width: 425px) {
-  .hero  {
+  .hero {
     padding-bottom: 190px;
     padding-top: 100px;
+    &--send-page {
+      padding-bottom: 40px;
+    }
   }
   .hero .title {
     font-size: 35px !important;
-}
+  }
 }

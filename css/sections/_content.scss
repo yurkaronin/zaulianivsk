@@ -131,9 +131,18 @@
   .content--transform {
     margin-top: -220px;
   }
+
+  .content--article {
+    margin-top: -220px;
+  }
+
 }
 
 @media (max-width: 650px) {
+  .content--article {
+    margin-top: -160px;
+  }
+
   .content--transform {
     margin-top: -160px;
   }
@@ -166,4 +175,3 @@
     padding: 16px 20px;
   }
 }
-

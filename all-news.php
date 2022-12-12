@@ -20,7 +20,7 @@
   ?>
 
   <main class="main inner-page">
-    <section class="hero hero--min">
+    <section class="hero hero--send-page">
       <div class="wrapper">
         <h1 class="title">Новости</h1>
       </div>
