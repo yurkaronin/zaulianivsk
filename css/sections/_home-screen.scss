@@ -335,6 +335,10 @@
     align-items: center;
   }
 
+  @media (min-width: 1920px) {
+    min-height: 120vh;
+  }
+
   @media (max-width: 1440px) {
     padding-top: 17%;
     min-height: 902px;

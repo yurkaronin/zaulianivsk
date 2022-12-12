@@ -34,13 +34,13 @@
 
     &:hover {
       background-color: var(--Cyan);
-    border-color: var(--Cyan);
-    color: var(--White);
-    svg {
-      path {
-        stroke: var(--White)
+      border-color: var(--Cyan);
+      color: var(--White);
+      svg {
+        path {
+          stroke: var(--White);
+        }
       }
-    }
     }
 
     &--dotted {
@@ -68,4 +68,31 @@
     }
   }
 
+  @media (max-width: 1440px) {
+    .pagination__link--text {
+      min-width: initial;
+      span {
+        display: none;
+      }
+    }
+    .pagination__item {
+      margin-right: 12px;
+    }
+    .pagination__link {
+      padding: 14px 15px;
+    }
+    .pagination__link svg {
+      margin: 0;
+    }
+    .pagination__list {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pagination__link {
+      padding: 10px 10px;
+      font-size: 12px;
+    }
+  }
 }
