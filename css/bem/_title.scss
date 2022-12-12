@@ -29,12 +29,17 @@
   }
 
   @media (max-width: 768px) {
+    font-size: 40px;
     &--tech {
-      font-size: 20px !important;
+      font-size: 20px;
     }
   }
 
   @media (max-width: 650px) {
-    font-size: 25px;
+    font-size: 32px;
+  }
+
+  @media (max-width: 570px) {
+      font-size: 27px;
   }
 }

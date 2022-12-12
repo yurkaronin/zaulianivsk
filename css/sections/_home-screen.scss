@@ -3,8 +3,9 @@
   overflow: hidden;
   background: var(--Grad);
   color: var(--White);
-  padding-top: 11%;
-  min-height: 970px;
+  padding-top: 190px;
+  min-height: 100vh;
+  padding-bottom: 130px;
   &__slide {
     position: relative;
     height: 100%;
@@ -335,13 +336,15 @@
     align-items: center;
   }
 
-  @media (min-width: 1920px) {
-    min-height: 120vh;
+  .voices-button__buttons li:last-child {
+    margin-right: 0;
   }
 
   @media (max-width: 1440px) {
-    padding-top: 17%;
-    min-height: 902px;
+    padding-top: 155px;
+    padding-bottom: 185px;
+    // padding-top: 17%;
+    // min-height: 902px;
     &__details .title {
       font-size: 55px;
     }
@@ -368,13 +371,10 @@
       max-width: 100%;
       width: initial;
     }
-    &__details .title {
-      font-size: 48px;
-    }
   }
 
   @media (max-width: 1000px) {
-    padding-top: 16%;
+    // padding-top: 16%;
     &__slide {
       grid-template-columns: 208px 1fr;
       align-items: flex-start;
@@ -444,8 +444,13 @@
     }
   }
 
+  @media (max-width: 850px) {
+    &__details .title {
+      font-size: 45px;
+    }
+  }
+
   @media (max-width: 755px) {
-    min-height: 1145px;
     &__slide {
       grid-template-columns: 1fr;
     }
@@ -454,7 +459,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 295px;
+      max-width: 220px;
     }
     .voices-button {
       position: initial;
@@ -468,13 +473,10 @@
     .voices-button__buttons li {
       margin-right: 24px;
     }
-    // .button {
-    //   padding: 14px 24px;
-    // }
+
   }
 
   @media (max-width: 650px) {
-    min-height: 1175px;
     .voices-button {
       flex-wrap: wrap;
     }
@@ -484,11 +486,14 @@
       width: 100%;
       margin-bottom: 16px;
     }
+    .title {
+      font-size: 36px !important;
+  }
   }
 
   @media (max-width: 500px) {
-    padding-top: 85px;
-    min-height: 755px;
+    padding-top: 100px;
+    // min-height: 755px;
 
     &__slide {
       display: block;

@@ -35,7 +35,31 @@
       background-color: var(--Blue);
       border-color: var(--Blue);
       color: var(--White);
+    }
+  }
 
+  @media (max-width: 500px) {
+    padding-top: 17px;
+    display: block;
+    width: 100%;
+    &__number {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 12px;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 12px;
+
+      span {
+        margin: 0;
+        font-size: 52px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    .voices-button__number span {
+      font-size: 40px;
     }
   }
 }

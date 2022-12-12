@@ -42,4 +42,17 @@
       width: 100%;
     }
   }
+  @media (max-width: 650px) {
+    .title {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .lead {
+      font-size: 18px;
+    }
+
+  }
 }
