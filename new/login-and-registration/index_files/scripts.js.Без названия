@@ -1,0 +1,346 @@
+// Глобальные переменные
+const menuButton = document.querySelector('.nav-button');
+const footerLink = document.querySelector('.footer__head-link');
+const mobileLink = document.querySelectorAll('.mobile-menu__link');
+
+// инициализация кастомных select
+if (document.querySelector('#select-1')) {
+  const select1 = new ItcCustomSelect('#select-1');
+};
+if (document.querySelector('#select-2')) {
+  const select2 = new ItcCustomSelect('#select-2');
+};
+if (document.querySelector('#select-3')) {
+  const select3 = new ItcCustomSelect('#select-3');
+};
+if (document.querySelector('#select-4')) {
+  const select4 = new ItcCustomSelect('#select-4');
+};
+if (document.querySelector('#select-5')) {
+  const select5 = new ItcCustomSelect('#select-5');
+};
+
+// Функции
+// функция подключения скриптов
+function includeFiles(url) {
+  var script = document.createElement('script');
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+};
+
+// модификация шапки
+function headerChange() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > 10) {
+    document.body.classList.add('header-sticky');
+  } else {
+    document.body.classList.remove('header-sticky');
+  }
+};
+
+// Основная рабочая область
+document.addEventListener("DOMContentLoaded", () => {
+  // подключаем файлы тут
+  //includeFiles("./js/parts/sliders.js");
+  // includeFiles("./js/parts/yandex.map.js");
+
+  //Инициализируем свайпер на главной
+  const swiper = new Swiper('.home-screen .mySwiper', {
+    // loop: true,
+    speed: 900,
+    parallax: true,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+
+    pagination: {
+      el: '.home-screen .swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.home-screen .swiper-button-next',
+      prevEl: '.home-screen .swiper-button-prev',
+    },
+  });
+
+  // небольшие программы
+  // Проверяем состояние прокрутки страницы. если прокрутка есть - перекрашиваем шапку
+  headerChange();
+  // отслеживаем событие прокрутки страницы > модификация шапки
+  document.addEventListener('scroll', e => {
+    headerChange();
+  });
+  // при клике по кнопке вызова меню - добавляем служебный класс на body
+  if (menuButton) {
+    menuButton.addEventListener('click', function () {
+      document.body.classList.toggle('mob-menu-open');
+      menuButton.classList.toggle('open');
+    });
+  };
+
+
+  // показ подкатегорий при наведении на пункт в меню
+  let headerMenuLink = document.querySelectorAll('.header .navigation__link');
+  if (document.body.clientWidth > 1440) {
+    for (let item of headerMenuLink) {
+      item.addEventListener('mouseover', function (event) {
+        console.log(this);
+        this.classList.add('active');
+      });
+
+      item.addEventListener('mouseout', function (event) {
+        this.classList.remove('active');
+        console.log(this);
+      });
+
+    };
+  } else {
+    for (let item of headerMenuLink) {
+      item.addEventListener('click', function (e) {
+        if (item.classList.contains('navigation-link-mod')) {
+          e.preventDefault();
+          // item.classList.toggle('mob-menu-open');
+          item.parentNode.classList.toggle('active');
+        } else {
+          // e.preventDefault();
+          // item.parentNode.classList.toggle('active-mod');
+        }
+
+      });
+
+    };
+  };
+
+  // аккордеоны в подвале
+  let footerMenuLink = document.querySelectorAll('.footer-link-mod');
+  for (let item of footerMenuLink) {
+    item.addEventListener('click', function (e) {
+      if (item.classList.contains('link-mod')) {
+        e.preventDefault();
+        // item.classList.toggle('mob-menu-open');
+        item.parentNode.classList.toggle('active');
+      } else {
+        e.preventDefault();
+        item.parentNode.classList.toggle('active-mod');
+      }
+
+    });
+
+  };
+
+
+  if (document.querySelector('#slider-photo')) {
+    const photoSlider = new Swiper('#slider-photo .swiper', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 32,
+      // If we need pagination
+      pagination: {
+        el: '#slider-photo .swiper-pagination',
+        type: "fraction",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '#slider-photo .swiper-button-next',
+        prevEl: '#slider-photo .swiper-button-prev',
+      },
+
+    });
+  };
+
+  // инициализация модальных окон
+  // https://micromodal.vercel.app/
+  MicroModal.init({
+    onShow: function (modal, body, trigger) {
+      console.log(modal.id);
+      console.log(body);
+      console.log(trigger);
+
+      if (modal.id == "vote") {
+        //Подготовка и очистка формы
+        modal.querySelector("#step-one").querySelector(".cust-modal__title").innerHTML = "Проголосовать за «" + trigger.target.dataset.name + "»";
+        modal.querySelector("#step-one").style.display = '';
+        modal.querySelector("#step-two").style.display = 'none';
+        modal.querySelector("#step-finish").style.display = 'none';
+        modal.querySelector('input[name="name"]').value = "";
+        modal.querySelector('input[name="phone"]').value = "";
+        modal.querySelector('input[name="code"]').value = "";
+        modal.querySelector("#step-two").querySelector(".cust-modal__subtitle").innerHTML = "";
+        let data = [];
+        //let code = getRndInteger(1000, 9999);
+        let code = "1111";
+
+        //Событие отправки 1 формы
+        modal.querySelector("#step-one").querySelector("form").addEventListener('submit', form1);
+
+        //Событие отправки 2 формы
+        modal.querySelector("#step-two").querySelector("form").addEventListener('submit', form2);
+
+        //Функция случайного числа
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        //Функция отправки смс
+        function sendingSms(code) {
+          //console.log(code);
+          //Очищаем
+          document.getElementById('codeBtnSend').classList.add('hide');
+          document.getElementById('codeTimer').innerHTML = '';
+          document.getElementById('codeTimer').classList.remove('red');
+          clearInterval(timer);
+
+          let data = [];
+          data.type = 'sms';
+          data.phone = arChoiceData.phone.replace(/[\D]+/g, '');
+          data.text = 'Код подтверждения: ' + code;
+
+          //Отправляем смс
+          BX.ajax.post(
+            '/local/templates/main/components/anz/appointment.add/kidsmed4/parts/ajaxSms.php',
+            data,
+            function (result) {
+              result = JSON.parse(result);
+              //console.log(result);
+              if (result.success == true) { //если успешно
+                let timeLeft = 60;
+
+                timer = setInterval(function () {
+                  if (--timeLeft >= 0) { // если таймер всё еще больше нуля
+                    document.getElementById('codeTimer').innerHTML = 'Вы сможете отправить код повторно через ' + timeLeft + ' сек.';
+                  } else {
+                    document.getElementById('codeBtnSend').addEventListener('click', function () {
+                      sendingSms(code);
+                    })
+                    document.getElementById('codeBtnSend').classList.remove('hide');
+                    document.getElementById('codeTimer').innerHTML = '';
+                    clearInterval(timer) // удаляем таймер
+                  }
+                }, 1000)
+              } else { //если неуспешно
+                document.getElementById('codeBtnSend').addEventListener('click', function () {
+                  sendingSms(code);
+                })
+                document.getElementById('codeBtnSend').classList.remove('hide');
+                document.getElementById('codeTimer').innerHTML = 'Ошибка отправки смс, попробуйте ещё раз или измените номер телефона';
+                document.getElementById('codeTimer').classList.add('red');
+              }
+            }
+          );
+        }
+
+        //Функция обработки 1 формы
+        function form1(e) {
+          e.preventDefault();
+          let form = modal.querySelector("#step-one").querySelector("form");
+          data["id"] = trigger.target.dataset.id;
+          data["name"] = form.querySelector('input[name="name"]').value;
+          data["phone"] = form.querySelector('input[name="phone"]').value;
+          data["phone"] = data["phone"].replace(/[\D]+/g, '');
+          data["confirm"] = form.querySelector('input[name="confirm"]').value;
+
+          if (data["id"] == undefined || data["name"] == "" || data["phone"] == "" || data["confirm"] != "on") {
+            MicroModal.show('message', {
+              onShow: function (modal, trigger) {
+                modal.querySelector('.cust-modal__title').innerHTML = "Заполните все обязательные поля";
+              },
+            });
+          } else if (false) {
+            MicroModal.show('message', {
+              onShow: function (modal, trigger) {
+                modal.querySelector('.cust-modal__title').innerHTML = "Укажите правильный номер телефон";
+              },
+            });
+          } else {
+            modal.querySelector("#step-one").style.display = 'none';
+            modal.querySelector("#step-two").style.display = '';
+            modal.querySelector("#step-two").querySelector(".cust-modal__subtitle").innerHTML = "На телефон " + data["phone"] + " был выслан код введите его ниже";
+            //sendingSms(code);
+            modal.querySelector("#step-one").querySelector("form").removeEventListener('submit', form1);
+          }
+        }
+
+        //Функция обработки 2 формы
+        function form2(e) {
+          e.preventDefault();
+          let form = modal.querySelector("#step-two").querySelector("form");
+          data["code"] = form.querySelector('input[name="code"]').value;
+
+          if (data["code"] == "" || data["code"] != code) {
+            MicroModal.show('message', {
+              onShow: function (modal, trigger) {
+                modal.querySelector('.cust-modal__title').innerHTML = "Введён неверный код подтверждения";
+              },
+            });
+          } else {
+            console.log(data);
+            BX.ajax.post(
+              '/local/ajax/vote.php',
+              data,
+              function (result) {
+                result = JSON.parse(result);
+                console.log(result);
+                modal.querySelector("#step-two").style.display = 'none';
+                modal.querySelector("#step-finish").style.display = '';
+                if (result.status == "success") {
+                  modal.querySelector("#step-finish").querySelector(".cust-modal__title").innerHTML = 'Ваш голос за “' + trigger.target.dataset.name + '” принят, спасибо вам за участие';
+                } else {
+                  modal.querySelector("#step-finish").querySelector(".cust-modal__title").innerHTML = result.text;
+                }
+                modal.querySelector("#step-two").querySelector("form").removeEventListener('submit', form2);
+              }
+            );
+          }
+        }
+      }
+
+    },
+    onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+    openTrigger: 'data-custom-open', // [3]
+    closeTrigger: 'data-micromodal-close', // [4]
+    openClass: 'is-open', // [5]
+    disableScroll: true, // [6]
+    disableFocus: false, // [7]
+    awaitOpenAnimation: false, // [8]
+    awaitCloseAnimation: false, // [9]
+    debugMode: true // [10]
+  });
+
+  // плавный скролл
+  SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime: 800,
+    // Размер шага в пикселях
+    stepSize: 75,
+
+    // Дополнительные настройки:
+
+    // Ускорение
+    accelerationDelta: 30,
+    // Максимальное ускорение
+    accelerationMax: 2,
+
+    // Поддержка клавиатуры
+    keyboardSupport: true,
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50,
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true,
+    pulseScale: 4,
+    pulseNormalize: 1,
+
+    // Поддержка тачпада
+    touchpadSupport: true,
+  });
+});
+
+
+
+
+
+//document.addEventListener('click', e => console.log(e.target));

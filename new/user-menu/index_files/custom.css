@@ -1,0 +1,12 @@
+.pagination__link.active {
+  background-color: var(--Cyan);
+  border-color: var(--Cyan);
+  color: var(--White);
+}
+
+.tabs__item-content {
+  margin-bottom: 0px;
+}
+.tabs__item-content .card-list {
+  margin-bottom: 32px;
+}

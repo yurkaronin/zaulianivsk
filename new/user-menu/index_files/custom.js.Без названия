@@ -1,0 +1,45 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Табы
+  if (document.querySelector('#js-tabs')) {
+    // кнопка показа таба
+    const tab = document.getElementsByClassName('tabs__button');
+    // блок с содержимым таба
+    const tabContent = document.getElementsByClassName('tabContent');
+    // показываем первый таб и активируем вкладку
+    showTabsContent("vote");
+
+    document.getElementById('js-tabs').addEventListener('click', function (event) {
+      // Временная переменная для сохранения элемента по которому кликнули
+      var target = event.target;
+      if (target.className == 'tabs__button') {
+        showTabsContent(event.target.dataset.id);
+      }
+    });
+
+    function hideTabsContent() {
+      for (var i = 0; i < tab.length; i++) {
+        tab[i].classList.remove('active');
+      }
+      for (var i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add("hide");
+      }
+    };
+
+    function showTabsContent(id) {
+      hideTabsContent();
+      for (var i = 0; i < tab.length; i++) {
+        if (id == tab[i].dataset.id) {
+          tab[i].classList.add('active');
+        }
+      }
+      for (var i = 0; i < tabContent.length; i++) {
+        if (id == tabContent[i].dataset.id) {
+          tabContent[i].classList.remove('hide');
+          tabContent[i].classList.add('show');
+        }
+      }
+    }
+  };
+
+});
